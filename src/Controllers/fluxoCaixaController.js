@@ -15,23 +15,23 @@ const fluxoController = {
             resp.status(404).send(error);
         }
     },
-    verItemID: async ( req, resp ) => {
+    verItemID: async (req, resp) => {
 
         let idEncontrado = req.params.id;
 
         try {
             const dbc = await connect();
-            const sql = `CALL pr_selecionar_um('tb_fluxocaixa', 'id_item_fluxo', ? );`;
+            const sql = `CALL pr_selecionar_um('vw_todos_dados_fluxocaixa_unificados', 'id_item_fluxo',? );`;
 
             // valida se ja existe id
-            const registroEncontrado = await services.seExisteRegistro("tb_fluxocaixa","id_item_fluxo", idEncontrado );
+            const registroEncontrado = await services.seExisteRegistro("tb_fluxocaixa", "id_item_fluxo", idEncontrado);
             if (registroEncontrado <= 0) {
-                resp.status(404).json({ msg:"Esse registro não existe no banco de dados" });
+                resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
                 return;
             }
-            
+
             const values = [idEncontrado];
-            const query = await dbc.query( sql,values );
+            const query = await dbc.query(sql, values);
             const resposta = query[0][0];
             resp.json(resposta);
         } catch (error) {
@@ -77,27 +77,44 @@ const fluxoController = {
     editarItem: async (req, resp) => {
 
         try {
-
+            const idItemfluxoCaixa = req.body.id;
             const idElemento = req.body.elemento;
+            const subelementos = req.body.subelementos;
+            const tipos = req.body.tipos;
+            const subtipos = req.body.subtipos;
+            const minitipos = req.body.minitipos;
+            const nanotipos = req.body.nanotipos;
             const descricao = req.body.descricao;
             const valor = req.body.valor;
 
-            // valida se ja existe id
-            const registroEncontrado = await services.seExisteRegistro("tb_fluxocaixa","id_item_fluxo", idEncontrado );
+            // Valida registro Existe
+            const registroEncontrado = await services.seExisteRegistro("tb_fluxocaixa", "id_item_fluxo", idItemfluxoCaixa);
             if (registroEncontrado <= 0) {
-                resp.status(404).json({ msg:"Esse registro não existe no banco de dados" });
+                resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
                 return;
             }
 
             const dbc = await connect();
-            const sql = `CALL pr_fluxocaixa_inserir(?, ?, ?,?);`;
-            const values = [idElemento, descricao, valor, 0];
+            const sql = `CALL pr_editar_fluxocaixa( ?,?, ?, ?, ?, ?, ?, ?, ?, ? );`;
+            const values = [
+                idItemfluxoCaixa,
+                idElemento,
+                subelementos,
+                tipos,
+                subtipos,
+                minitipos,
+                nanotipos,
+                descricao,
+                valor,
+                0
+            ];
+
             const query = await dbc.query(sql, values);
 
             const respostaFinal = query[0][0][0].resposta;
             resp.json(respostaFinal)
         } catch (error) {
-            resp.status(404).send(error)
+            resp.status(404).json(error)
         }
     },
     deletarItem: async (req, resp) => {
@@ -112,9 +129,9 @@ const fluxoController = {
             const values = [idEncontrado];
 
             // valida se ja existe id
-          const registroEncontrado = await services.seExisteRegistro("tb_fluxocaixa","id_item_fluxo", idEncontrado );
+            const registroEncontrado = await services.seExisteRegistro("tb_fluxocaixa", "id_item_fluxo", idEncontrado);
             if (registroEncontrado <= 0) {
-                resp.status(404).json({ msg:"Esse registro não existe no banco de dados" });
+                resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
                 return;
             }
 

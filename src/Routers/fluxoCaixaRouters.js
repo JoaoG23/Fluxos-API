@@ -5,7 +5,10 @@ const fluxoCaixaController = require('../Controllers/fluxoCaixaController');
 
 router.get("/:id", fluxoCaixaController.verItemID);
 router.get("/", fluxoCaixaController.visualizarTodosItems);
+
 router.post("/", fluxoCaixaController.inserirItem);
+
+router.put("/", fluxoCaixaController.editarItem);
 
 router.delete("/:id", fluxoCaixaController.deletarItem);
 router.delete("/", fluxoCaixaController.deletarItem);

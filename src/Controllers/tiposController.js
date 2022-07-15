@@ -1,18 +1,17 @@
 const connect = require('../Model/dbconnect');
 const services = require('./services');
 
-const elementosController = {
+const tiposController = {
 
- 
-    tabela:'tb_elementos',
-    colunaID:'idelementos',
-    colunaDescricao:'descricao_elementos',
+    tabela:'tb_tipos',
+    colunaID:'id_tipos',
+    colunaDescricao:'descricao_tipos',
 
     visualizarTodos: async (req, resp) => {
 
         try {
 
-            const verRegistro = await services.listAll( elementosController.tabela );
+            const verRegistro = await services.listAll( tiposController.tabela );
             resp.json(verRegistro);
 
         } catch (error) {
@@ -25,8 +24,8 @@ const elementosController = {
 
         try {
 
-            let idEncontrado = req.params.id_elementos;
-            const verRegistro = await services.listForID( elementosController.tabela, elementosController.colunaID ,idEncontrado );
+            let idEncontrado = req.params.id_tipos;
+            const verRegistro = await services.listForID( tiposController.tabela, tiposController.colunaID ,idEncontrado );
             resp.json(verRegistro);
 
         } catch (error) {
@@ -38,8 +37,8 @@ const elementosController = {
     inserir: async (req, resp) => {
 
         try {
-            const novoElemento = req.body.nome_elementos;
-            const inserirRegistro = await services.insert( elementosController.tabela, novoElemento );
+            const tipoAInserir = req.body.nome_tipos;
+            const inserirRegistro = await services.insert( tiposController.tabela, tipoAInserir );
             resp.json(inserirRegistro);
 
         } catch (error) {
@@ -50,19 +49,19 @@ const elementosController = {
     deletar: async (req, resp) => {
 
         try {
-            let idEncontrado = req.params.id_elementos;
+            let idEncontrado = req.params.id_tipos;
 
             if (!idEncontrado) {
-                idEncontrado = req.body.id_elementos;
+                idEncontrado = req.body.id_tipos;
             }
 
-            const registroEncontrado = await services.seExisteRegistro(elementosController.tabela, elementosController.colunaID, idEncontrado);
+            const registroEncontrado = await services.seExisteRegistro(tiposController.tabela, tiposController.colunaID, idEncontrado);
             if (registroEncontrado <= 0) {
                 resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
                 return;
             }
 
-            const deletarRegistro = await services.remove( elementosController.tabela, elementosController.colunaID ,idEncontrado );
+            const deletarRegistro = await services.remove( tiposController.tabela, tiposController.colunaID ,idEncontrado );
             resp.json(deletarRegistro);
 
         } catch (error) {
@@ -74,16 +73,16 @@ const elementosController = {
     editar: async (req, resp) => {
 
         try {
-            const idEncontrado = req.body.id_elementos;
-            const nomeelementos = req.body.nome_elementos;
+            const idEncontrado = req.body.id_tipos;
+            const nometipos = req.body.nome_tipos;
 
-            const registroEncontrado = await services.seExisteRegistro( elementosController.tabela, elementosController.colunaID, idEncontrado );
+            const registroEncontrado = await services.seExisteRegistro( tiposController.tabela, tiposController.colunaID, idEncontrado );
             if (registroEncontrado <= 0) {
                 resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
                 return;
             }
 
-            const editarRegistro = await services.edit( elementosController.tabela, elementosController.colunaDescricao, nomeelementos, elementosController.colunaID, idEncontrado );
+            const editarRegistro = await services.edit( tiposController.tabela, tiposController.colunaDescricao, nometipos, tiposController.colunaID, idEncontrado );
             resp.json(editarRegistro)
         } catch (error) {
             resp.status(404).send(error)
@@ -92,4 +91,4 @@ const elementosController = {
 
 };
 
-module.exports = elementosController;
+module.exports = tiposController;
