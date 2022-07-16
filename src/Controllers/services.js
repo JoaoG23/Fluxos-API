@@ -99,6 +99,20 @@ const services = {
         } catch (error) {
             console.error(error);
         }
+    },
+    calculatesBasedOnCriteria: async ( mes, ano, colunaAModificar ,criterio1, idElemento, criterio2 ) => {
+
+        try {
+            const dbc = await connect();
+            const sql = `CALL pr_calcula_gastoganho_com_criterio( ?, ?, ? , ? ,? ,? );`;
+            const values = [ mes, ano, colunaAModificar ,criterio1, idElemento, criterio2 ];
+            const respostaQuery = await dbc.query(sql, values);
+            const respostaFinal = respostaQuery[0][0][0].resposta;
+            
+            return respostaFinal;
+        } catch (error) {
+            console.error(error);
+        }
     }
 
 }
