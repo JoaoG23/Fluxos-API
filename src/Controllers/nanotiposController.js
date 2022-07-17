@@ -55,7 +55,7 @@ const nanotiposController = {
                 idEncontrado = req.body.id_nanotipos;
             }
 
-            const registroEncontrado = await services.seExisteRegistro(nanotiposController.tabela, nanotiposController.colunaID, idEncontrado);
+            const registroEncontrado = await services.ifExistsRegister(nanotiposController.tabela, nanotiposController.colunaID, idEncontrado);
             if (registroEncontrado <= 0) {
                 resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
                 return;
@@ -76,7 +76,7 @@ const nanotiposController = {
             const idEncontrado = req.body.id_nanotipos;
             const nomenanotipos = req.body.nome_nanotipos;
 
-            const registroEncontrado = await services.seExisteRegistro( nanotiposController.tabela, nanotiposController.colunaID, idEncontrado );
+            const registroEncontrado = await services.ifExistsRegister( nanotiposController.tabela, nanotiposController.colunaID, idEncontrado );
             if (registroEncontrado <= 0) {
                 resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
                 return;

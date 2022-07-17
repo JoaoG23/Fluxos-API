@@ -55,7 +55,7 @@ const minitiposController = {
                 idEncontrado = req.body.id_minitipos;
             }
 
-            const registroEncontrado = await services.seExisteRegistro(minitiposController.tabela, minitiposController.colunaID, idEncontrado);
+            const registroEncontrado = await services.ifExistsRegister(minitiposController.tabela, minitiposController.colunaID, idEncontrado);
             if (registroEncontrado <= 0) {
                 resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
                 return;
@@ -76,7 +76,7 @@ const minitiposController = {
             const idEncontrado = req.body.id_minitipos;
             const nomeminitipos = req.body.nome_minitipos;
 
-            const registroEncontrado = await services.seExisteRegistro( minitiposController.tabela, minitiposController.colunaID, idEncontrado );
+            const registroEncontrado = await services.ifExistsRegister( minitiposController.tabela, minitiposController.colunaID, idEncontrado );
             if (registroEncontrado <= 0) {
                 resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
                 return;

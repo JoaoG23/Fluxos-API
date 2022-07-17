@@ -55,7 +55,7 @@ const subtiposController = {
                 idEncontrado = req.body.id_subtipos;
             }
 
-            const registroEncontrado = await services.seExisteRegistro(subtiposController.tabela, subtiposController.colunaID, idEncontrado);
+            const registroEncontrado = await services.ifExistsRegister(subtiposController.tabela, subtiposController.colunaID, idEncontrado);
             if (registroEncontrado <= 0) {
                 resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
                 return;
@@ -76,7 +76,7 @@ const subtiposController = {
             const idEncontrado = req.body.id_subtipos;
             const nomesubtipos = req.body.nome_subtipos;
 
-            const registroEncontrado = await services.seExisteRegistro( subtiposController.tabela, subtiposController.colunaID, idEncontrado );
+            const registroEncontrado = await services.ifExistsRegister( subtiposController.tabela, subtiposController.colunaID, idEncontrado );
             if (registroEncontrado <= 0) {
                 resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
                 return;

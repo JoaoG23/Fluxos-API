@@ -2,7 +2,7 @@ const connect = require('../Model/dbconnect');
 
 const services = {
 
-    seExisteRegistro: async ( nome_tabela, nomeColunaId, id ) => {
+    ifExistsRegister: async ( nome_tabela, nomeColunaId, id ) => {
 
         try {
 
@@ -106,6 +106,20 @@ const services = {
             const dbc = await connect();
             const sql = `CALL pr_calcula_gastoganho_com_criterio( ?, ?, ? , ? ,? ,? );`;
             const values = [ mes, ano, colunaAModificar ,criterio1, idElemento, criterio2 ];
+            const respostaQuery = await dbc.query(sql, values);
+            const respostaFinal = respostaQuery[0][0][0].resposta;
+            
+            return respostaFinal;
+        } catch (error) {
+            console.error(error);
+        }
+    },
+    countFieldForTable: async ( tablePesquisada , idElemento ) => {
+
+        try {
+            const dbc = await connect();
+            const sql = `CALL pr_conta_quantocampos_tabela( ? , ? );`;
+            const values = [ tablePesquisada , idElemento ];
             const respostaQuery = await dbc.query(sql, values);
             const respostaFinal = respostaQuery[0][0][0].resposta;
             

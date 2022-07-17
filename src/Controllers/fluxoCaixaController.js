@@ -1,6 +1,7 @@
 const connect = require('../Model/dbconnect');
 const services = require('./services');
 
+
 const fluxoController = {
 
     visualizarTodosItems: async (req, resp) => {
@@ -12,6 +13,7 @@ const fluxoController = {
             const resposta = query[0][0];
             resp.json(resposta);
         } catch (error) {
+            console.log("visualizarTodosItems: ~ error", error)
             resp.status(404).send(error);
         }
     },
@@ -24,7 +26,7 @@ const fluxoController = {
             const sql = `CALL pr_selecionar_um('vw_todos_dados_fluxocaixa_unificados', 'id_item_fluxo',? );`;
 
             // valida se ja existe id
-            const registroEncontrado = await services.seExisteRegistro("tb_fluxocaixa", "id_item_fluxo", idEncontrado);
+            const registroEncontrado = await services.ifExistsRegister("tb_fluxocaixa", "id_item_fluxo", idEncontrado);
             if (registroEncontrado <= 0) {
                 resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
                 return;
@@ -88,7 +90,7 @@ const fluxoController = {
             const valor = req.body.valor;
 
             // Valida registro Existe
-            const registroEncontrado = await services.seExisteRegistro("tb_fluxocaixa", "id_item_fluxo", idItemfluxoCaixa);
+            const registroEncontrado = await services.ifExistsRegister("tb_fluxocaixa", "id_item_fluxo", idItemfluxoCaixa);
             if (registroEncontrado <= 0) {
                 resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
                 return;
@@ -129,7 +131,7 @@ const fluxoController = {
             const values = [idEncontrado];
 
             // valida se ja existe id
-            const registroEncontrado = await services.seExisteRegistro("tb_fluxocaixa", "id_item_fluxo", idEncontrado);
+            const registroEncontrado = await services.ifExistsRegister("tb_fluxocaixa", "id_item_fluxo", idEncontrado);
             if (registroEncontrado <= 0) {
                 resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
                 return;

@@ -3,26 +3,27 @@ const services = require('./services');
 
 const calculoValoresController = {
 
- 
-    mes:new Date().getMonth() + 1,
-    ano:new Date().getFullYear(),
-    coluna:'cod_elementos_item_fluxo',
-    criterio1:'=',
-    idElemento:1,
-    criterio2:'<',
+
+    mes: new Date().getMonth() + 1,
+    ano: new Date().getFullYear(),
+    coluna: 'cod_elementos_item_fluxo',
+    criterio1: '=',
+    idElemento: 1,
+    criterio2: '<',
+    tabela:'tb_subelementos',
 
     verGastoMesAtual: async (req, resp) => {
 
         try {
 
-            const verRegistro = await services.calculatesBasedOnCriteria( 
+            const verRegistro = await services.calculatesBasedOnCriteria(
                 calculoValoresController.mes,
                 calculoValoresController.ano,
                 calculoValoresController.coluna,
                 calculoValoresController.criterio1,
                 calculoValoresController.idElemento,
-                calculoValoresController.criterio2,
-                 );
+                calculoValoresController.criterio2 = '<',
+            );
 
             resp.json(verRegistro);
 
@@ -34,14 +35,14 @@ const calculoValoresController = {
     verGanhoMesAtual: async (req, resp) => {
 
         try {
-            const verRegistro = await services.calculatesBasedOnCriteria( 
+            const verRegistro = await services.calculatesBasedOnCriteria(
                 calculoValoresController.mes,
                 calculoValoresController.ano,
                 calculoValoresController.coluna,
                 calculoValoresController.criterio1,
                 calculoValoresController.idElemento,
                 calculoValoresController.criterio2 = '>',
-                 );
+            );
 
             resp.json(verRegistro);
 
@@ -67,60 +68,106 @@ const calculoValoresController = {
         }
     },
 
-    inserir: async (req, resp) => {
-
+    gastoUltimos12meses: async (req, resp) => {
         try {
-            const novoElemento = req.body.nome_calculoValores;
-            const inserirRegistro = await services.insert( calculoValoresController.tabela, novoElemento );
-            resp.json(inserirRegistro);
 
-        } catch (error) {
-            resp.status(404).send(error);
+            let anoSelecionado = req.params.ano;
+
+            let estoqueMeses = [];
+           for (let i = 1; i < 13; i++) {
+               
+               let verRegistro = await services.calculatesBasedOnCriteria(
+                   calculoValoresController.mes = i,
+                   calculoValoresController.ano = anoSelecionado,
+                   calculoValoresController.coluna,
+                   calculoValoresController.criterio1,
+                   calculoValoresController.idElemento,
+                   calculoValoresController.criterio2 = '<'
+                   );
+                 estoqueMeses.push({ mes:i , gasto:verRegistro });
+                }
+                resp.json(estoqueMeses);
+                
+            } catch (error) {
+                resp.status(404).send(error)
         }
+
     },
-    
-    deletar: async (req, resp) => {
 
+    ganhoUltimos12meses: async (req, resp) => {
         try {
-            let idEncontrado = req.params.id_calculoValores;
+            let anoSelecionado = req.params.ano;
 
-            if (!idEncontrado) {
-                idEncontrado = req.body.id_calculoValores;
-            }
-
-            const registroEncontrado = await services.seExisteRegistro(calculoValoresController.tabela, calculoValoresController.colunaID, idEncontrado);
-            if (registroEncontrado <= 0) {
-                resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
-                return;
-            }
-
-            const deletarRegistro = await services.remove( calculoValoresController.tabela, calculoValoresController.colunaID ,idEncontrado );
-            resp.json(deletarRegistro);
-
-        } catch (error) {
-            console.error(error);
-            resp.status(404).send(error);
+            let estoqueMeses = [];
+           for (let i = 1; i < 13; i++) {
+               
+               let verRegistro = await services.calculatesBasedOnCriteria(
+                   calculoValoresController.mes = i,
+                   calculoValoresController.ano = anoSelecionado,
+                   calculoValoresController.coluna,
+                   calculoValoresController.criterio1,
+                   calculoValoresController.idElemento,
+                   calculoValoresController.criterio2 = '>'
+                   );
+                 estoqueMeses.push({ mes:i , ganho:verRegistro });
+                }
+                resp.json(estoqueMeses);
+                
+            } catch (error) {
+                resp.status(404).send(error)
         }
+
     },
-    
-    editar: async (req, resp) => {
-
+    gastoPorCriterio: async (req, resp) => {
         try {
-            const idEncontrado = req.body.id_calculoValores;
-            const nomecalculoValores = req.body.nome_calculoValores;
 
-            const registroEncontrado = await services.seExisteRegistro( calculoValoresController.tabela, calculoValoresController.colunaID, idEncontrado );
-            if (registroEncontrado <= 0) {
-                resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
-                return;
-            }
-
-            const editarRegistro = await services.edit( calculoValoresController.tabela, calculoValoresController.colunaDescricao, nomecalculoValores, calculoValoresController.colunaID, idEncontrado );
-            resp.json(editarRegistro)
-        } catch (error) {
-            resp.status(404).send(error)
+            const quantosIds = await services.countFieldForTable('tb_subelementos','idsubelementos');
+            let estoqueMeses = [];
+           for (let i = 1; i < quantosIds; i++) {
+               
+               let verRegistro = await services.calculatesBasedOnCriteria(
+                   calculoValoresController.mes,
+                   calculoValoresController.ano,
+                    calculoValoresController.coluna = 'subelementos',
+                    calculoValoresController.criterio1,
+                     calculoValoresController.idElemento = i,
+                      calculoValoresController.criterio2 = '<'
+                      );
+                 estoqueMeses.push({categoria:i ,valorgasto:verRegistro});
+                }
+                resp.json(estoqueMeses);
+                
+            } catch (error) {
+                console.error("err", error)
+                resp.status(404).send(error)
         }
-    }
+
+    },
+    ganhoPorCriterio: async (req, resp) => {
+        try {
+
+            const quantosIds = await services.countFieldForTable('tb_subelementos','idsubelementos');
+            let estoqueMeses = [];
+           for (let i = 1; i < quantosIds; i++) {
+               
+               let verRegistro = await services.calculatesBasedOnCriteria(
+                   calculoValoresController.mes,
+                   calculoValoresController.ano,
+                    calculoValoresController.coluna = 'subelementos',
+                    calculoValoresController.criterio1,
+                     calculoValoresController.idElemento = i,
+                      calculoValoresController.criterio2 = '>'
+                      );
+                 estoqueMeses.push({categoria:i ,valorganho:verRegistro});
+                }
+                resp.json(estoqueMeses);
+                
+            } catch (error) {
+                console.error("err", error)
+                resp.status(404).send(error)
+        }
+
+    },
 
 };
 

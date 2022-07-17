@@ -56,7 +56,7 @@ const elementosController = {
                 idEncontrado = req.body.id_elementos;
             }
 
-            const registroEncontrado = await services.seExisteRegistro(elementosController.tabela, elementosController.colunaID, idEncontrado);
+            const registroEncontrado = await services.ifExistsRegister(elementosController.tabela, elementosController.colunaID, idEncontrado);
             if (registroEncontrado <= 0) {
                 resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
                 return;
@@ -77,7 +77,7 @@ const elementosController = {
             const idEncontrado = req.body.id_elementos;
             const nomeelementos = req.body.nome_elementos;
 
-            const registroEncontrado = await services.seExisteRegistro( elementosController.tabela, elementosController.colunaID, idEncontrado );
+            const registroEncontrado = await services.ifExistsRegister( elementosController.tabela, elementosController.colunaID, idEncontrado );
             if (registroEncontrado <= 0) {
                 resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
                 return;
