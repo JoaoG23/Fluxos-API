@@ -121,21 +121,23 @@ const calculoValoresController = {
     gastoPorCriterio: async (req, resp) => {
         try {
 
+            let mesInput = req.params.mes;
+
             const quantosIds = await services.countFieldForTable('tb_subelementos','idsubelementos');
-            let estoqueMeses = [];
+            let estoqueValoresCalculados = [];
            for (let i = 1; i < quantosIds; i++) {
                
                let verRegistro = await services.calculatesBasedOnCriteria(
-                   calculoValoresController.mes,
+                   calculoValoresController.mes || mesInput,
                    calculoValoresController.ano,
                     calculoValoresController.coluna = 'subelementos',
                     calculoValoresController.criterio1,
                      calculoValoresController.idElemento = i,
                       calculoValoresController.criterio2 = '<'
                       );
-                 estoqueMeses.push({categoria:i ,valorgasto:verRegistro});
+                    estoqueValoresCalculados.push({categoria:i ,valorgasto:verRegistro});
                 }
-                resp.json(estoqueMeses);
+                resp.json(estoqueValoresCalculados);
                 
             } catch (error) {
                 console.error("err", error)
@@ -146,21 +148,23 @@ const calculoValoresController = {
     ganhoPorCriterio: async (req, resp) => {
         try {
 
+            let mesInput = req.params.mes;
+
             const quantosIds = await services.countFieldForTable('tb_subelementos','idsubelementos');
-            let estoqueMeses = [];
+            let estoqueValoresCalculados = [];
            for (let i = 1; i < quantosIds; i++) {
                
                let verRegistro = await services.calculatesBasedOnCriteria(
-                   calculoValoresController.mes,
+                   calculoValoresController.mes || mesInput,
                    calculoValoresController.ano,
                     calculoValoresController.coluna = 'subelementos',
                     calculoValoresController.criterio1,
                      calculoValoresController.idElemento = i,
                       calculoValoresController.criterio2 = '>'
                       );
-                 estoqueMeses.push({categoria:i ,valorganho:verRegistro});
+                 estoqueValoresCalculados.push({categoria:i ,valorganho:verRegistro});
                 }
-                resp.json(estoqueMeses);
+                resp.json(estoqueValoresCalculados);
                 
             } catch (error) {
                 console.error("err", error)

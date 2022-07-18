@@ -15,6 +15,7 @@ router.use('/subelementos', subelementosRouters);
 router.use('/tipos', tiposRouters);
 router.use('/subtipos', subtiposRouters);
 router.use('/minitipos', minitiposRouters);
+router.use('/nanotipos', nanotiposRouters);
 router.use('/calculos', calculoValoresRouters);
 
 module.exports = router;
