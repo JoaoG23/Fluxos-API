@@ -3,7 +3,6 @@ const services = require('./services');
 
 const calculoValoresController = {
 
-
     mes: new Date().getMonth() + 1,
     ano: new Date().getFullYear(),
     coluna: 'cod_elementos_item_fluxo',
@@ -24,7 +23,6 @@ const calculoValoresController = {
                 calculoValoresController.idElemento,
                 calculoValoresController.criterio2 = '<',
             );
-
             resp.json(verRegistro);
 
         } catch (error) {
@@ -84,7 +82,7 @@ const calculoValoresController = {
                    calculoValoresController.idElemento,
                    calculoValoresController.criterio2 = '<'
                    );
-                 estoqueMeses.push({ mes:i , gasto:verRegistro });
+                 estoqueMeses.push({ mes:i ,verRegistro });
                 }
                 resp.json(estoqueMeses);
                 
@@ -121,13 +119,15 @@ const calculoValoresController = {
     gastoPorCriterio: async (req, resp) => {
         try {
 
+            // nome da coluna
+            // mes 
             let mesInput = req.params.mes;
 
             const quantosIds = await services.countFieldForTable('tb_subelementos','idsubelementos');
             let estoqueValoresCalculados = [];
            for (let i = 1; i < quantosIds; i++) {
                
-               let verRegistro = await services.calculatesBasedOnCriteria(
+               let verRegistro = await services.calculatesBasedOnCriteriaWithName(
                    calculoValoresController.mes || mesInput,
                    calculoValoresController.ano,
                     calculoValoresController.coluna = 'subelementos',
@@ -135,7 +135,7 @@ const calculoValoresController = {
                      calculoValoresController.idElemento = i,
                       calculoValoresController.criterio2 = '<'
                       );
-                    estoqueValoresCalculados.push({categoria:i ,valorgasto:verRegistro});
+                    estoqueValoresCalculados.push({categoria:i ,dados:verRegistro});
                 }
                 resp.json(estoqueValoresCalculados);
                 
@@ -147,22 +147,24 @@ const calculoValoresController = {
     },
     ganhoPorCriterio: async (req, resp) => {
         try {
+            // nome da coluna
+            // mes 
+            // coluna de ID 
+            let mesInput = req.query.mes;
 
-            let mesInput = req.params.mes;
-
-            const quantosIds = await services.countFieldForTable('tb_subelementos','idsubelementos');
+            const quantosIds = await services.countFieldForTable('tb_subelementos','idsubelementos'); // Para pesquisa do ultimo ID
             let estoqueValoresCalculados = [];
            for (let i = 1; i < quantosIds; i++) {
                
-               let verRegistro = await services.calculatesBasedOnCriteria(
-                   calculoValoresController.mes || mesInput,
+               let verRegistro = await services.calculatesBasedOnCriteriaWithName(
+                   calculoValoresController.mes = mesInput,
                    calculoValoresController.ano,
                     calculoValoresController.coluna = 'subelementos',
                     calculoValoresController.criterio1,
                      calculoValoresController.idElemento = i,
                       calculoValoresController.criterio2 = '>'
                       );
-                 estoqueValoresCalculados.push({categoria:i ,valorganho:verRegistro});
+                 estoqueValoresCalculados.push({categoria:i ,dados:verRegistro});
                 }
                 resp.json(estoqueValoresCalculados);
                 
