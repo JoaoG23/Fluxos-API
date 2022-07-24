@@ -101,7 +101,7 @@ const calculoValoresController = {
                
                let verRegistro = await services.calculatesBasedOnCriteria(
                    calculoValoresController.mes = i,
-                   calculoValoresController.ano = anoSelecionado,
+                   calculoValoresController.ano || anoSelecionado,
                    calculoValoresController.coluna,
                    calculoValoresController.criterio1,
                    calculoValoresController.idElemento,
