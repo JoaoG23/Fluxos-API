@@ -8,6 +8,7 @@ const subtiposRouters = require('./subtiposRouters');
 const minitiposRouters = require('./minitiposRouters');
 const nanotiposRouters = require('./nanotiposRouters');
 const calculoValoresRouters = require('./calculoValoresRouters');
+const loginRouter = require('./loginRouters');
 
 router.use('/fluxo' , fluxoCaixaRouter);
 router.use('/elementos', elementosRouters);
@@ -17,5 +18,6 @@ router.use('/subtipos', subtiposRouters);
 router.use('/minitipos', minitiposRouters);
 router.use('/nanotipos', nanotiposRouters);
 router.use('/calculos', calculoValoresRouters);
+router.use('/auth', loginRouter);
 
 module.exports = router;
