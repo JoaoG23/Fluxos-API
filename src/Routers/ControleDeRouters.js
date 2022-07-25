@@ -10,14 +10,17 @@ const nanotiposRouters = require('./nanotiposRouters');
 const calculoValoresRouters = require('./calculoValoresRouters');
 const loginRouter = require('./loginRouters');
 
-router.use('/fluxo' , fluxoCaixaRouter);
-router.use('/elementos', elementosRouters);
-router.use('/subelementos', subelementosRouters);
-router.use('/tipos', tiposRouters);
-router.use('/subtipos', subtiposRouters);
-router.use('/minitipos', minitiposRouters);
-router.use('/nanotipos', nanotiposRouters);
-router.use('/calculos', calculoValoresRouters);
+const auth = require('./Auth')
+
+router.use('/fluxo' , auth.admin, fluxoCaixaRouter);
+router.use('/elementos',  auth.admin  ,elementosRouters);
+router.use('/subelementos',  auth.admin ,subelementosRouters);
+router.use('/tipos',  auth.admin , tiposRouters);
+router.use('/subtipos',  auth.admin ,subtiposRouters);
+router.use('/minitipos',  auth.admin ,minitiposRouters);
+router.use('/nanotipos',  auth.admin ,nanotiposRouters);
+router.use('/calculos', auth.comum, calculoValoresRouters);
 router.use('/auth', loginRouter);
+
 
 module.exports = router;
