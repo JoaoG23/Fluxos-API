@@ -1,5 +1,12 @@
 const connect = require('../Model/dbconnect');
 
+// **** SERVICE *****
+/*
+Tudo que é usado mais de 
+2 vezes ou mais ficara aqui
+evitando repeticao de codigo 
+*/
+
 const services = {
 
     ifExistsRegister: async (nome_tabela, nomeColunaId, id) => {
@@ -46,6 +53,20 @@ const services = {
             const dbc = await connect();
             const sql = `CALL pr_selecionar_um( ? , ? , ? );`;
             const values = [nome_tabela, nomeColunaId, id];
+            const respostaQuery = await dbc.query(sql, values);
+            const respostaFinal = respostaQuery[0][0];
+            return respostaFinal;
+        } catch (error) {
+            console.error(error);
+        }
+    },
+
+    listForName: async (nome_tabela, colunaDePesquisa, nomeProcurado) => {
+
+        try {
+            const dbc = await connect();
+            const sql = `CALL pr_selecionar_algum_elemento_caracteres( ? , ? , ? );`;
+            const values = [nome_tabela, colunaDePesquisa, nomeProcurado];
             const respostaQuery = await dbc.query(sql, values);
             const respostaFinal = respostaQuery[0][0];
             return respostaFinal;
