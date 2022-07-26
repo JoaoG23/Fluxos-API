@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const services = require("./services");
 const { json } = require("express");
 
-const loginController = {
+const usuarioController = {
   tabela: "tb_login",
   colunaID: "id_login",
   // colunaDescricao:'descricao_subtipos',
@@ -16,7 +16,7 @@ const loginController = {
       const nomeUsuario = req.body.usuario;
       const senhaUsuario = req.body.senha;
       const verificarExistenciaUsuario = await services.listForName(
-        loginController.tabela,
+        usuarioController.tabela,
         "nomeusuario_login",
         nomeUsuario
       );
@@ -59,7 +59,6 @@ const loginController = {
 
   verTodos: async (req, resp) => {
     try {
-      //   const dbc = await connect();
       const verTodos = await services.listAll("tb_login");
       resp.json(verTodos);
     } catch (error) {
@@ -69,11 +68,7 @@ const loginController = {
 
   registrar: async (req, resp) => {
     try {
-      // const {error} = registerValidate(req.body);
-      // if (error) { return resp.status(400).send(error.message); }
-
       const dbc = await connect();
-
       const nome = req.body.nomeusuario;
       const login = req.body.login;
       const senha = bcrypt.hashSync(req.body.senha);
@@ -106,7 +101,7 @@ const loginController = {
         idUsuario = req.body.id;
       }
       
-      const deletarUsuario = await services.remove( loginController.tabela, loginController.colunaID, idUsuario );
+      const deletarUsuario = await services.remove( usuarioController.tabela, usuarioController.colunaID, idUsuario );
       resp.json(deletarUsuario);
     } catch (error) {
       resp.status(400).json(error);
@@ -141,4 +136,4 @@ const loginController = {
 
   esqueciSenha: async (req, resp) => {},
 };
-module.exports = loginController;
+module.exports = usuarioController;

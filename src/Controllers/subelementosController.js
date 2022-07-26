@@ -1,4 +1,4 @@
-const connect = require('../Model/dbconnect');
+// const connect = require('../Model/dbconnect');
 const services = require('./services');
 
 const subelementosController = {
@@ -37,9 +37,9 @@ const subelementosController = {
     inserir: async (req, resp) => {
 
         try {
-            const novoElemento = req.body.nome_subelementos;
+            let novoElemento = req.body.nome_subelemento;
             const inserirRegistro = await services.insert( subelementosController.tabela, novoElemento );
-            resp.json(inserirRegistro);
+            resp.json({inserirRegistro});
 
         } catch (error) {
             resp.status(404).send(error);
