@@ -13,15 +13,15 @@ const loginRouter = require('./loginRouters');
 
 const auth = require('./Auth')
 
-router.use('/fluxo' , auth.comum,  auth.admin, fluxoCaixaRouter);
-router.use('/elementos',  auth.comum,  auth.admin, elementosRouters);
-router.use('/subelementos', auth.comum,  auth.admin,subelementosRouters);
-router.use('/tipos', auth.comum,  auth.admin, tiposRouters);
-router.use('/subtipos',  auth.comum,  auth.admin, subtiposRouters);
-router.use('/minitipos',  auth.comum,  auth.admin, minitiposRouters);
-router.use('/nanotipos', auth.comum,  auth.admin, nanotiposRouters);
+router.use('/admin/fluxo' , auth.comum,  auth.admin, fluxoCaixaRouter);
+router.use('/admin/elementos',  auth.comum,  auth.admin, elementosRouters);
+router.use('/admin/subelementos', auth.comum,  auth.admin,subelementosRouters);
+router.use('/admin/tipos', auth.comum,  auth.admin, tiposRouters);
+router.use('/admin/subtipos',  auth.comum,  auth.admin, subtiposRouters);
+router.use('/admin/minitipos',  auth.comum,  auth.admin, minitiposRouters);
+router.use('/admin/nanotipos', auth.comum,  auth.admin, nanotiposRouters);
+router.use('/admin/usuario', auth.comum,  auth.admin ,usuarioRouter);
 router.use('/calculos',  auth.comum,  calculoValoresRouters);
-router.use('/usuario', auth.comum,  auth.admin ,usuarioRouter);
 router.use('/login', loginRouter);
 
 

@@ -8,8 +8,6 @@ const { json } = require("express");
 const usuarioController = {
   tabela: "tb_login",
   colunaID: "id_login",
-  // colunaDescricao:'descricao_subtipos',
-  // Nome, telefone, email, tipo,
 
   logar: async (req, resp) => {
     try {
@@ -125,7 +123,6 @@ const usuarioController = {
       const values = [idUsuario ,nome, login, senha, email, tel, admin];
       const queryRegistrar = await dbc.query(verificarSql, values);
       const resposta = queryRegistrar[0][0][0].resposta;
-      
 
       resp.json(resposta);
     } catch (error) {
