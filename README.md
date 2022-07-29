@@ -2,14 +2,12 @@
 
 # Fluxos  API
 
-<img src='./assets/logo.svg' width=200px align='center'>
+<img align='right' src='./assets/logo.svg' width=200px >
 
 Estou criando um Sistema de fluxo de caixa para mim, controlar minha finanças e abandonar as tabelas de excel
 
 
-Api do sistema de financeiro 
-
-### Indice 🗂️
+### Indice 💰
 
 1. Introdução
 2. Requisitos e Desenvolvimento
@@ -18,19 +16,27 @@ Api do sistema de financeiro
 5. Considerações Finais
 6. Licença
 
-### Introdução
+## Introdução 💵
+
 
 Uma esse desenlvovimento foi um projeto do Curso ProgramadorBr, sendo que a estilização dos dos elementos teve um toque especial das minhas mãos.
 
-### Requisitos e Desenvolvimento
+## Requisitos e Desenvolvimento 🤳🔧
 
-**Desenvolvimento**
 
-Node
+**Desenvolvimento** 
 
-Express
 
-Mysql
+
+<img width=80 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" />
+
+<img  width=80 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" />
+
+<img width=90 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
+
+          
+
+
 
 **Requisitos**
 
@@ -101,7 +107,7 @@ Exemplo: Fluxo de caixa:
 	},
 ```
 
-### Como Instalar
+## Como Instalar 🪛
 
 1. Tenha o node instalado em seu PC
 2. Faça o clone
@@ -111,9 +117,12 @@ Exemplo: Fluxo de caixa:
 6. Use uma API de teste do seu agrado. Ex:Postman, ou Insommia.
 7. Importe o arquivo HAR. Path: /api/api-fluxos-v1-har
 
-### Como usar
+## Como usar 👨‍💻
 
 **Iniciar:**
+
+### Clique aqui para acessar a documentação completa da API..
+<a href='https://docs-fluxosapi.netlify.app' >Clique aqui</a>
 
 1. Faça login rota inicial. Exemplo: http://localhost:3000/login
 2. Busque o token de acesso na chave do Json Resposta : “tokenUser”
@@ -132,12 +141,12 @@ Poderá Inserir, deletar, criar, editar qualquer uma dessas. Igual na API:
 - Minitipos
 - Nanotipos
 
-### Considerações Finais
+## Considerações Finais ✍️
 
 Bom... Isso é somente a API da aplicação. O Front será desenvolvido em outra breve..
 Valeu por passar aqui! 😉Um abração de Ursoo 🐻! Volte sempre!
 
-### Autor
+## Autor
 
 Feito com 🤭 por Joao Guilherme 👋🏽 Entre em contato!
 
