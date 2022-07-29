@@ -7,6 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
+    "dev":"nodemon init.js",
     "start": "node init.js"
   },
   "author": "",

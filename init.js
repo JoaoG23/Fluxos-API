@@ -4,7 +4,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const port = 2001;
+const port = process.env.PORTA || 3000;
 const controleDeRouters = require('./src/Routers/ControleDeRouters');
 
 app.use("/" ,express.json(), controleDeRouters);

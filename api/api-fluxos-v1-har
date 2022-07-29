@@ -1,0 +1,4335 @@
+{
+	"log": {
+		"version": "1.2",
+		"creator": {
+			"name": "Insomnia REST Client",
+			"version": "insomnia.desktop.app:v2022.4.2"
+		},
+		"entries": [
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 2250.757,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:2001/admin/usuario/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"nomeusuario\":\"Carol Santos\",\n\t\"login\":\"caroldev\",\n\t\"senha\":\"caroldev\",\n\t\"email\":\"caroldev@ooo.com\",\n\t\"telefone\":\"318888-8888\"\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 0,
+					"statusText": "Error",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": "",
+						"text": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 2250.757,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Registrar"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 3.075,
+				"request": {
+					"method": "PUT",
+					"url": "http://localhost:2001/admin/usuario/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"id\":11,\n\t\"nomeusuario\":\"Ana Desenvolvedora\",\n\t\"login\":\"betadev\",\n\t\"senha\":\"betadev\",\n\t\"email\":\"betadev@betadev.com\",\n\t\"telefone\":\"318888-8888\",\n\t\"admin\":false\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "58"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"3a-+G1Si3PbJim2X3Po2ZNkGphC3UI\""
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 25 Jul 2022 23:43:37 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 58,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"situacao\":false,\"msg\":\"Você ainda não está logado..\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 3.075,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Atualizar"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 147.499,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:2001/login",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"usuario\":\"joaodev\",\n\t\"senha\":\"joaodev\"\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 202,
+					"statusText": "Accepted",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "255"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"ff-3Ms91DdToUWQ2Zq1R1cIFhr9LOg\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 29 Jul 2022 11:13:09 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 255,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"situation\":true,\"msg\":\"Usuario logado com sucesso\",\"tokenUser\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 147.499,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Login"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 3.392,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:2001/admin/usuario/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"id\":4\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "58"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"3a-+G1Si3PbJim2X3Po2ZNkGphC3UI\""
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 25 Jul 2022 23:44:00 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 58,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"situacao\":false,\"msg\":\"Você ainda não está logado..\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 3.392,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Remover"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 24.079,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/admin/usuario/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "165"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"a5-qJQC4BOgVBJ8qtO9haVCoinmkR4\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 29 Jul 2022 09:58:47 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 165,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"id_login\":1,\"nome_login\":\"maria\",\"nomeusuario_login\":\"mariass\",\"senha_login\":\"mariass\",\"email_login\":\"maria@ooo.com\",\"tel_login\":\"318888-8888\",\"isadmin_login\":0}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 24.079,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Ver pelo Id"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 24.299999999999997,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/admin/usuario/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "853"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"355-WcgLxYrKerm4i1wFHW7ob0ryyK4\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 29 Jul 2022 09:58:29 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 853,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"id_login\":1,\"nome_login\":\"maria\",\"nomeusuario_login\":\"mariass\",\"senha_login\":\"mariass\",\"email_login\":\"maria@ooo.com\",\"tel_login\":\"318888-8888\",\"isadmin_login\":0},{\"id_login\":10,\"nome_login\":\"joaodev\",\"nomeusuario_login\":\"joaodev\",\"senha_login\":\"$2a$10$QB6gXVyvJaeDwChw0AfjiORVAw9PtgfMqP9pUGaBDtP1kdtJUkola\",\"email_login\":\"joaodev@ooo.com\",\"tel_login\":\"318888-8888\",\"isadmin_login\":1},{\"id_login\":11,\"nome_login\":\"Ana Desenvolvedora\",\"nomeusuario_login\":\"betadev\",\"senha_login\":\"$2a$10$zqzDW9XZdr0Z4RVWKceedOYqmdRDh1JBkieKDdocsvmbonilKIaW.\",\"email_login\":\"betadev@betadev.com\",\"tel_login\":\"318888-8888\",\"isadmin_login\":0},{\"id_login\":13,\"nome_login\":\"Carol Santos\",\"nomeusuario_login\":\"caroldev\",\"senha_login\":\"$2a$10$oMx.aoK.oBy70pWouHT1SObxt/ghIiIY31pVXz3rPhjdJWgVRhtkG\",\"email_login\":\"caroldev@ooo.com\",\"tel_login\":\"318888-8888\",\"isadmin_login\":0}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 24.299999999999997,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Ver todos"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 117.268,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/admin/fluxo/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "1393"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"571-p5gnMxeKI9SRL76xlViYCT7grH4\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 29 Jul 2022 11:13:44 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 1393,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"id_item_fluxo\":1,\"dia_item_fluxo\":16,\"mes_item_fluxo\":7,\"ano_item_fluxo\":2022,\"hora_item_fluxo\":\"12:40:59\",\"descricao_elementos\":\"\",\"descricao_subelementos\":\"\",\"descricao_tipos\":\"\",\"descricao_subtipos\":\"\",\"descricao_minitipos\":\"\",\"descricao_nanotipos\":\"\",\"descricao_item_fluxo\":\"Saldo Anterior\",\"valor_item_fluxo\":\"0.00\",\"saldo_atual\":\"0.00\"},{\"id_item_fluxo\":2,\"dia_item_fluxo\":22,\"mes_item_fluxo\":7,\"ano_item_fluxo\":2022,\"hora_item_fluxo\":\"18:31:27\",\"descricao_elementos\":\"\",\"descricao_subelementos\":\"\",\"descricao_tipos\":\"\",\"descricao_subtipos\":\"\",\"descricao_minitipos\":\"\",\"descricao_nanotipos\":\"\",\"descricao_item_fluxo\":\"Ganhei na loteria\",\"valor_item_fluxo\":\"100.00\",\"saldo_atual\":\"100.00\"},{\"id_item_fluxo\":3,\"dia_item_fluxo\":22,\"mes_item_fluxo\":7,\"ano_item_fluxo\":2022,\"hora_item_fluxo\":\"18:31:38\",\"descricao_elementos\":\"\",\"descricao_subelementos\":\"\",\"descricao_tipos\":\"\",\"descricao_subtipos\":\"\",\"descricao_minitipos\":\"\",\"descricao_nanotipos\":\"\",\"descricao_item_fluxo\":\"Ganhei servico\",\"valor_item_fluxo\":\"100.00\",\"saldo_atual\":\"200.00\"},{\"id_item_fluxo\":4,\"dia_item_fluxo\":22,\"mes_item_fluxo\":7,\"ano_item_fluxo\":2022,\"hora_item_fluxo\":\"18:31:58\",\"descricao_elementos\":\"\",\"descricao_subelementos\":\"\",\"descricao_tipos\":\"\",\"descricao_subtipos\":\"\",\"descricao_minitipos\":\"\",\"descricao_nanotipos\":\"\",\"descricao_item_fluxo\":\"Comprei pao\",\"valor_item_fluxo\":\"-21.00\",\"saldo_atual\":\"179.00\"}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 117.268,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Todos os Items"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 26.465,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/admin/fluxo/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "346"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"15a-Pdm2sMomvxqgf2s5/5tr7EgLza8\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 29 Jul 2022 11:14:05 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 346,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"id_item_fluxo\":1,\"dia_item_fluxo\":16,\"mes_item_fluxo\":7,\"ano_item_fluxo\":2022,\"hora_item_fluxo\":\"12:40:59\",\"descricao_elementos\":\"\",\"descricao_subelementos\":\"\",\"descricao_tipos\":\"\",\"descricao_subtipos\":\"\",\"descricao_minitipos\":\"\",\"descricao_nanotipos\":\"\",\"descricao_item_fluxo\":\"Saldo Anterior\",\"valor_item_fluxo\":\"0.00\",\"saldo_atual\":\"0.00\"}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 26.465,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Item por ID params"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 33.466,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/admin/elementos",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "92"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"5c-dgXWijmOWrlo4ulKNSx8OeRtXWc\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 17:16:05 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 92,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"idelementos\":1,\"descricao_elementos\":\"\"},{\"idelementos\":5,\"descricao_elementos\":\"Ativo\"}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 33.466,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Ver todos tipos"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 2.447,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/calculos/mesatualgasto/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA4ODc3MCwiZXhwIjoxNjU5MDkyNzcwfQ.Ru4qFKHTGq3aOOQ7NMqiMYwRXYNPuSgHkNh5X2w9A7I"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "91"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"5b-aCUyLPNiTUjY5uDpMLvcRtQfvV4\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:21:57 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 91,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"name\":\"TokenExpiredError\",\"message\":\"jwt expired\",\"expiredAt\":\"2022-07-26T00:24:00.000Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 2.447,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Todos Gastos mês atual"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 68.501,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/admin/subelementos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "50"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"32-/MD5W8kwiEyx4dH9uZN4/OoLRPc\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 29 Jul 2022 10:35:20 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 50,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"idsubelementos\":1,\"descricao_subelementos\":\"\"}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 68.501,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Ver todos tipos"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 24.37,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/admin/tipos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "37"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"25-scZpeBsaoMr3JJs9j7yZ9uRGvO4\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 29 Jul 2022 10:35:43 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 37,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"id_tipos\":1,\"descricao_tipos\":\"\"}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 24.37,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Ver todos tipos"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 25.946,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/admin/subtipos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "42"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"2a-zTJ2MHMvzZo7jMZJkdSgXWieDmA\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 29 Jul 2022 10:35:58 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 42,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"idsubtipos\":1,\"descricao_subtipos\":\"\"}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 25.946,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Ver todos tipos"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 4.677,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/admin/minitipos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "45"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"2d-KjSKxrNeif+wpt5VvW+QYKjuw1w\""
+						},
+						{
+							"name": "Date",
+							"value": "Sun, 17 Jul 2022 20:41:27 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 45,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"id_minitipos\":1,\"descricao_minitipos\":\"\"}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 4.677,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Ver todos tipos"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 1.5230000000000001,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/admin/nanotipos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "91"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"5b-0TcE2LYB5VS5CNaSM9YAa9qMLSE\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:41:25 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 91,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"name\":\"TokenExpiredError\",\"message\":\"jwt expired\",\"expiredAt\":\"2022-07-26T00:29:41.000Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 1.5230000000000001,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Ver todos tipos"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 3.19,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/calculos/mesatualganho/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA4ODc3MCwiZXhwIjoxNjU5MDkyNzcwfQ.Ru4qFKHTGq3aOOQ7NMqiMYwRXYNPuSgHkNh5X2w9A7I"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "21"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"15-lAAwQ5JgxB0t0dHcqxrjU0KKTco\""
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 25 Jul 2022 23:48:50 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 21,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"resposta\":\"200.00\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 3.19,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Todos Ganhos mês atual"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 1.527,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/calculos/saldoatual/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA4ODc3MCwiZXhwIjoxNjU5MDkyNzcwfQ.Ru4qFKHTGq3aOOQ7NMqiMYwRXYNPuSgHkNh5X2w9A7I"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "91"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"5b-aCUyLPNiTUjY5uDpMLvcRtQfvV4\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:22:57 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 91,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"name\":\"TokenExpiredError\",\"message\":\"jwt expired\",\"expiredAt\":\"2022-07-26T00:24:00.000Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 1.527,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Ver Saldo Atual"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 2.249,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/calculos/gastoultimo12/2022",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA4ODc3MCwiZXhwIjoxNjU5MDkyNzcwfQ.Ru4qFKHTGq3aOOQ7NMqiMYwRXYNPuSgHkNh5X2w9A7I"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "91"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"5b-aCUyLPNiTUjY5uDpMLvcRtQfvV4\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:23:09 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 91,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"name\":\"TokenExpiredError\",\"message\":\"jwt expired\",\"expiredAt\":\"2022-07-26T00:24:00.000Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 2.249,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Gasto do Ultimos 12 meses"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 19.584,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/calculos/ganhoultimo12/2022",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [
+						{
+							"name": "",
+							"value": ""
+						}
+					],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "440"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"1b8-yOdrJ2vRjdzW/d6H82PCA9XyFnk\""
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 25 Jul 2022 23:49:46 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 440,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"mes\":1,\"ganho\":{\"resposta\":null}},{\"mes\":2,\"ganho\":{\"resposta\":null}},{\"mes\":3,\"ganho\":{\"resposta\":null}},{\"mes\":4,\"ganho\":{\"resposta\":null}},{\"mes\":5,\"ganho\":{\"resposta\":null}},{\"mes\":6,\"ganho\":{\"resposta\":null}},{\"mes\":7,\"ganho\":{\"resposta\":\"200.00\"}},{\"mes\":8,\"ganho\":{\"resposta\":null}},{\"mes\":9,\"ganho\":{\"resposta\":null}},{\"mes\":10,\"ganho\":{\"resposta\":null}},{\"mes\":11,\"ganho\":{\"resposta\":null}},{\"mes\":12,\"ganho\":{\"resposta\":null}}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 19.584,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Ganho do Ultimos 12 meses"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 1.4729999999999999,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/calculos/ganhosubelementos",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA4ODc3MCwiZXhwIjoxNjU5MDkyNzcwfQ.Ru4qFKHTGq3aOOQ7NMqiMYwRXYNPuSgHkNh5X2w9A7I"
+						}
+					],
+					"queryString": [
+						{
+							"name": "mes",
+							"value": "7"
+						}
+					],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "91"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"5b-aCUyLPNiTUjY5uDpMLvcRtQfvV4\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:23:48 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 91,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"name\":\"TokenExpiredError\",\"message\":\"jwt expired\",\"expiredAt\":\"2022-07-26T00:24:00.000Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 1.4729999999999999,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Ganho por Subelementos"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 1.7129999999999999,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/calculos/gastosubelementos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA4ODc3MCwiZXhwIjoxNjU5MDkyNzcwfQ.Ru4qFKHTGq3aOOQ7NMqiMYwRXYNPuSgHkNh5X2w9A7I"
+						}
+					],
+					"queryString": [
+						{
+							"name": "mes",
+							"value": "7"
+						}
+					],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "91"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"5b-aCUyLPNiTUjY5uDpMLvcRtQfvV4\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:23:46 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 91,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"name\":\"TokenExpiredError\",\"message\":\"jwt expired\",\"expiredAt\":\"2022-07-26T00:24:00.000Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 1.7129999999999999,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Gasto por Subelementos"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 27.847,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/admin/elementos/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "44"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"2c-p0w4BN7aF2fK51fpmTk03oeiVkI\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 29 Jul 2022 10:00:39 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 44,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"idelementos\":1,\"descricao_elementos\":\"\"}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 27.847,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Ver pelo ID"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 19.817999999999998,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/admin/subelementos/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "50"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"32-/MD5W8kwiEyx4dH9uZN4/OoLRPc\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 29 Jul 2022 10:35:23 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 50,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"idsubelementos\":1,\"descricao_subelementos\":\"\"}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 19.817999999999998,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Ver pelo ID"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 3.609,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/admin/tipos/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "37"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"25-scZpeBsaoMr3JJs9j7yZ9uRGvO4\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 29 Jul 2022 10:35:45 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 37,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"id_tipos\":1,\"descricao_tipos\":\"\"}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 3.609,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Ver pelo ID"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 1.503,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/admin/subtipos/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "58"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"3a-+G1Si3PbJim2X3Po2ZNkGphC3UI\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:27:02 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 58,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"situacao\":false,\"msg\":\"Você ainda não está logado..\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 1.503,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Ver pelo ID"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 0,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/admin/minitipos/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Ver pelo ID"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 1.081,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:2001/admin/nanotipos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "91"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"5b-0TcE2LYB5VS5CNaSM9YAa9qMLSE\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:41:22 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 91,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"name\":\"TokenExpiredError\",\"message\":\"jwt expired\",\"expiredAt\":\"2022-07-26T00:29:41.000Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 1.081,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Ver pelo ID"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 39.794999999999995,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:2001/admin/fluxo/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"elemento\":1,\n\t\"subelementos\":2,\n\t\"tipos\":1,\n\t\"subtipos\":1,\n\t\"minitipos\":1,\n\t\"nanotipos\":1,\n\t\"descricao\":\"Comprei Ovos\",\n\t\"valor\":-12\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "56"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"38-IpnB/3DIaELBT1UwK/dp+1Ge10A\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 22 Jul 2022 22:40:56 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 56,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"msg\":\"Registro inserido com sucesso\",\"situation\":true}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 39.794999999999995,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Inserir Items"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 11.556000000000001,
+				"request": {
+					"method": "PUT",
+					"url": "http://localhost:2001/admin/fluxo/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"id\":3,\n\t\"elemento\":1,\n\t\"subelementos\":1,\n\t\"tipos\":1,\n\t\"subtipos\":1,\n\t\"minitipos\":1,\n\t\"nanotipos\":1,\n\t\"descricao\":\"OPA\",\n\t\"valor\":12\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "55"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"37-2LirOAn1cwAHEnfs4OevaMta0/o\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 15 Jul 2022 16:23:25 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 55,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"msg\":\"Registro editado com sucesso\",\"situation\":true}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 11.556000000000001,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Editar Item"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 34.859,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:2001/admin/elementos",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"nome_elementos\":\"Ativo\"\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "56"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"38-IpnB/3DIaELBT1UwK/dp+1Ge10A\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 17:15:29 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 56,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"msg\":\"Registro inserido com sucesso\",\"situation\":true}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 34.859,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Inserir"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 1.216,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:2001/admin/subelementos",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"nome_subelemento\":\"Teste\"\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "91"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"5b-0TcE2LYB5VS5CNaSM9YAa9qMLSE\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:24:57 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 91,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"name\":\"TokenExpiredError\",\"message\":\"jwt expired\",\"expiredAt\":\"2022-07-26T00:29:41.000Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 1.216,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Inserir"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 64.228,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:2001/admin/tipos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"nome_tipos\":\"Renda-variavel\"\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "56"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"38-IpnB/3DIaELBT1UwK/dp+1Ge10A\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 29 Jul 2022 10:35:48 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 56,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"msg\":\"Registro inserido com sucesso\",\"situation\":true}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 64.228,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Inserir"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 1.374,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:2001/admin/subtipos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"nome_subtipos\":\"Bens de Consumo\"\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "58"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"3a-+G1Si3PbJim2X3Po2ZNkGphC3UI\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:27:12 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 58,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"situacao\":false,\"msg\":\"Você ainda não está logado..\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 1.374,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Inserir"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 0,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:2001/admin/minitipos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Content-Type",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"nome_minitipos\":\"Pela API\"\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Inserir"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 1.413,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:2001/admin/nanotipos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"nome_nanotipos\":\"Pela API\"\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "91"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"5b-0TcE2LYB5VS5CNaSM9YAa9qMLSE\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:41:20 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 91,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"name\":\"TokenExpiredError\",\"message\":\"jwt expired\",\"expiredAt\":\"2022-07-26T00:29:41.000Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 1.413,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Inserir"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 2.7439999999999998,
+				"request": {
+					"method": "PUT",
+					"url": "http://localhost:2001/admin/elementos",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"id_elementos\":12,\n\t\"nome_elementos\":\"Editado\"\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "58"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"3a-+G1Si3PbJim2X3Po2ZNkGphC3UI\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:18:47 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 58,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"situacao\":false,\"msg\":\"Você ainda não está logado..\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 2.7439999999999998,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Editar"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 27.203000000000003,
+				"request": {
+					"method": "PUT",
+					"url": "http://localhost:2001/admin/subelementos",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"id_subelementos\":2,\n\t\"nome_subelementos\":\"Atualizacao de teste\"\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 404,
+					"statusText": "Not Found",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "53"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"35-U/OKB/HwkcnOhEunuNaOvM6EbGc\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 29 Jul 2022 10:35:33 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 53,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"msg\":\"Esse registro não existe no banco de dados\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 27.203000000000003,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Editar"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 1.57,
+				"request": {
+					"method": "PUT",
+					"url": "http://localhost:2001/admin/tipos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"id_tipos\":4,\n\t\"nome_tipos\":\"Atualizacao de teste\"\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "91"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"5b-0TcE2LYB5VS5CNaSM9YAa9qMLSE\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:25:59 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 91,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"name\":\"TokenExpiredError\",\"message\":\"jwt expired\",\"expiredAt\":\"2022-07-26T00:29:41.000Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 1.57,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Editar"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 27.914,
+				"request": {
+					"method": "PUT",
+					"url": "http://localhost:2001/admin/subtipos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"id_subtipos\":4,\n\t\"nome_subtipos\":\"Atualizacao de teste\"\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "91"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"5b-tl2T6W5yCvYN2c/wSFhZsnSLZ+8\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 29 Jul 2022 13:36:54 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 91,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"name\":\"TokenExpiredError\",\"message\":\"jwt expired\",\"expiredAt\":\"2022-07-29T12:19:49.000Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 27.914,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Editar"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 0,
+				"request": {
+					"method": "PUT",
+					"url": "http://localhost:2001/admin/minitipos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"id_minitipos\":2,\n\t\"nome_minitipos\":\"Atualizacao de teste\"\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Editar"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 2.003,
+				"request": {
+					"method": "PUT",
+					"url": "http://localhost:2001/admin/nanotipos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"id_nanotipos\":2,\n\t\"nome_nanotipos\":\"Atualizacao de teste\"\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "91"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"5b-0TcE2LYB5VS5CNaSM9YAa9qMLSE\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:41:18 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 91,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"name\":\"TokenExpiredError\",\"message\":\"jwt expired\",\"expiredAt\":\"2022-07-26T00:29:41.000Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 2.003,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Editar"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 1.262,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:2001/admin/subelementos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"id_subelementos\":3\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "91"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"5b-0TcE2LYB5VS5CNaSM9YAa9qMLSE\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:24:52 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 91,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"name\":\"TokenExpiredError\",\"message\":\"jwt expired\",\"expiredAt\":\"2022-07-26T00:29:41.000Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 1.262,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 3.7,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:2001/admin/tipos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Content-Type",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"id_tipos\":3\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "58"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"3a-+G1Si3PbJim2X3Po2ZNkGphC3UI\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 29 Jul 2022 10:35:50 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 58,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"situacao\":false,\"msg\":\"Você ainda não está logado..\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 3.7,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 1.2149999999999999,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:2001/admin/subtipos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"id_subtipos\":4\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "91"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"5b-0TcE2LYB5VS5CNaSM9YAa9qMLSE\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:30:08 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 91,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"name\":\"TokenExpiredError\",\"message\":\"jwt expired\",\"expiredAt\":\"2022-07-26T00:29:41.000Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 1.2149999999999999,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 0,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:2001/admin/minitipos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"id_minitipos\":2\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 2.832,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:2001/admin/nanotipos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"id_nanotipos\":2\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "91"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"5b-0TcE2LYB5VS5CNaSM9YAa9qMLSE\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:41:27 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 91,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"name\":\"TokenExpiredError\",\"message\":\"jwt expired\",\"expiredAt\":\"2022-07-26T00:29:41.000Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 2.832,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 37.361,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:2001/admin/elementos/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"id_elementos\":4\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "58"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"3a-aSKw9G9k39/g2LLpzvyC6iyW7gg\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 17:15:53 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 58,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"msg\":\"Registro deletado com sucesso\",\"situation\":\"true\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 37.361,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 33.163,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:2001/admin/elementos/5",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "58"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"3a-aSKw9G9k39/g2LLpzvyC6iyW7gg\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 17:16:17 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 58,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"msg\":\"Registro deletado com sucesso\",\"situation\":\"true\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 33.163,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar Params"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 14.991000000000001,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:2001/admin/subelementos/2",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 404,
+					"statusText": "Not Found",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "53"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"35-U/OKB/HwkcnOhEunuNaOvM6EbGc\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 29 Jul 2022 10:35:38 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 53,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"msg\":\"Esse registro não existe no banco de dados\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 14.991000000000001,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar Params"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 3.436,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:2001/admin/tipos/4",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": ""
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 404,
+					"statusText": "Not Found",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "53"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"35-U/OKB/HwkcnOhEunuNaOvM6EbGc\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 29 Jul 2022 10:35:52 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 53,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"msg\":\"Esse registro não existe no banco de dados\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 3.436,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar Params"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 2.219,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:2001/admin/subtipos/4",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "91"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"5b-0TcE2LYB5VS5CNaSM9YAa9qMLSE\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:30:04 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 91,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"name\":\"TokenExpiredError\",\"message\":\"jwt expired\",\"expiredAt\":\"2022-07-26T00:29:41.000Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 2.219,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar Params"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 0,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:2001/admin/minitipos/4",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar Params"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 0.987,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:2001/admin/nanotipos/4",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "91"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"5b-0TcE2LYB5VS5CNaSM9YAa9qMLSE\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 26 Jul 2022 16:41:29 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 91,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"name\":\"TokenExpiredError\",\"message\":\"jwt expired\",\"expiredAt\":\"2022-07-26T00:29:41.000Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0.987,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar Params"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 8.59,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:2001/admin/fluxo/3",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "56"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"38-jC934Ft9zuOe/IRYFFW0MCklxYA\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 15 Jul 2022 16:24:15 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 56,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"msg\":\"Registro Deletado com sucesso\",\"situation\":true}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 8.59,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar params"
+			},
+			{
+				"startedDateTime": "2022-07-29T13:38:00.279Z",
+				"time": 38.323,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:2001/admin/fluxo/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "authorization-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY1OTA5MzE4OSwiZXhwIjoxNjU5MDk3MTg5fQ.JyAQLtG0frqCAz_UdtskW8KzPoWcvn0Vz-L7ZeA0npA"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"id\":2\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "56"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"38-jC934Ft9zuOe/IRYFFW0MCklxYA\""
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 15 Jul 2022 15:06:41 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 56,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"msg\":\"Registro Deletado com sucesso\",\"situation\":true}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 38.323,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar itens"
+			}
+		]
+	}
+}

@@ -43,6 +43,7 @@ const elementosController = {
             resp.json(inserirRegistro);
 
         } catch (error) {
+            console.error(error)
             resp.status(404).send(error);
         }
     },

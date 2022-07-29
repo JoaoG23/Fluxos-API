@@ -8,6 +8,7 @@ const { json } = require("express");
 const usuarioController = {
   tabela: "tb_login",
   colunaID: "id_login",
+  colunaEmail: "email_login",
 
   logar: async (req, resp) => {
     try {
@@ -37,18 +38,21 @@ const usuarioController = {
       const token = jwt.sign(
         {
           id: usuarioEncontrado.id_login,
-          email:usuarioEncontrado.email_login,
+          email: usuarioEncontrado.email_login,
           admin: usuarioEncontrado.isadmin_login,
         },
         process.env.TOKEN_SECRET,
-        { expiresIn:4000 }
-      ); 
-        
-      resp.header("authorization-token", token); 
+        { expiresIn: 4000 }
+      );
+
+      resp.header("authorization-token", token);
       resp
         .status(202)
-        .json({ situation: true, msg: "Usuario logado com sucesso", tokenUser:token});
-
+        .json({
+          situation: true,
+          msg: "Usuario logado com sucesso",
+          tokenUser: token,
+        });
     } catch (error) {
       console.error(error);
       resp.status(400).send(error);
@@ -58,6 +62,20 @@ const usuarioController = {
   verTodos: async (req, resp) => {
     try {
       const verTodos = await services.listAll("tb_login");
+      resp.json(verTodos);
+    } catch (error) {
+      resp.status(400).send(error);
+    }
+  },
+
+  verUmPeloId: async (req, resp) => {
+    let idEncontrado = req.params.id;
+    try {
+      const verTodos = await services.listForID(
+        usuarioController.tabela,
+        usuarioController.colunaID,
+        idEncontrado
+      );
       resp.json(verTodos);
     } catch (error) {
       resp.status(400).send(error);
@@ -78,6 +96,7 @@ const usuarioController = {
       const queryRegistrar = await dbc.query(verificarSql, values);
       const resposta = queryRegistrar[0][0][0];
 
+      console.info(resposta);
       resp.status(201).json(resposta);
     } catch (error) {
       if (error.sqlState == 23000) {
@@ -87,19 +106,23 @@ const usuarioController = {
         });
         return;
       }
+      console.info(error);
       resp.status(400).send(error);
     }
   },
 
   deletar: async (req, resp) => {
     try {
-      
-      let idUsuario = req.params.id;
-      if (!idUsuario) {
-        idUsuario = req.body.id;
+      let emailUsuario = req.params.id;
+      if (!emailUsuario) {
+        emailUsuario = req.body.id;
       }
-      
-      const deletarUsuario = await services.remove( usuarioController.tabela, usuarioController.colunaID, idUsuario );
+
+      const deletarUsuario = await services.remove(
+        usuarioController.tabela,
+        usuarioController.colunaID,
+        emailUsuario
+      );
       resp.json(deletarUsuario);
     } catch (error) {
       resp.status(400).json(error);
@@ -108,10 +131,9 @@ const usuarioController = {
 
   editar: async (req, resp) => {
     try {
-      
       const dbc = await connect();
 
-      let idUsuario = req.body.id;
+      let emailUsuario = req.body.id;
       const nome = req.body.nomeusuario;
       const login = req.body.login;
       const senha = bcrypt.hashSync(req.body.senha);
@@ -120,7 +142,7 @@ const usuarioController = {
       const admin = req.body.admin;
 
       const verificarSql = `CALL pr_editar_usuario( ? , ? , ? , ? , ? , ?, ? )`;
-      const values = [idUsuario ,nome, login, senha, email, tel, admin];
+      const values = [emailUsuario, nome, login, senha, email, tel, admin];
       const queryRegistrar = await dbc.query(verificarSql, values);
       const resposta = queryRegistrar[0][0][0].resposta;
 
@@ -130,7 +152,46 @@ const usuarioController = {
     }
   },
 
+  consultaEmail: async (req, resp) => {
+    // Em Breve >>>>>
 
-  esqueciSenha: async (req, resp) => {},
+    // try {
+    //   let emailUsuario = req.params.email;
+    //   if (!emailUsuario) {
+    //     emailUsuario = req.body.email;
+    //   }
+
+    //   const seExisteEmail = await services.listForID(
+    //     usuarioController.tabela,
+    //     usuarioController.colunaEmail,
+    //     emailUsuario
+    //   );
+
+    //   // Enviar um email com o link
+    //   resp.json(seExisteEmail);
+    // } catch (error) {
+    //   resp.status(400).json(error);
+    // }
+  },
+  esqueciMinhaSenha: async (req, resp) => {
+
+    ///Em Breve >>>>>
+    
+    // try {
+    //   let emailUsuario = req.params.email;
+    //   if (!emailUsuario) {
+    //     emailUsuario = req.body.email;
+    //   }
+
+    //   const seExisteEmail = await services.listForID(
+    //     usuarioController.tabela,
+    //     usuarioController.colunaEmail,
+    //     emailUsuario
+    //   );
+    //   resp.json(seExisteEmail);
+    // } catch (error) {
+    //   resp.status(400).json(error);
+    // }
+  },
 };
 module.exports = usuarioController;

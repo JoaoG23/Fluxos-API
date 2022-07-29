@@ -3,7 +3,7 @@ const router = express.Router();
 const usuarioController = require('../Controllers/usuarioController');
 
 router.get("/", usuarioController.verTodos);
-router.post("/logar", usuarioController.logar);
+router.get("/:id", usuarioController.verUmPeloId);
 
 router.post("/", usuarioController.registrar);
 router.delete("/:id", usuarioController.deletar);
