@@ -28,7 +28,7 @@ Uma esse desenlvovimento foi um projeto do Curso ProgramadorBr, sendo que a esti
 
 
 
-<img width=80 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" />
+<img width=80 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
 
 <img  width=80 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" />
 
