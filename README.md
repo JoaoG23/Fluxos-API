@@ -1,9 +1,11 @@
-<<<<<<< HEAD
-# Fluxos API
-=======
-# Fluxos  Back-end
+
+
+# Fluxos  API
+
+<img src='./assets/logo.svg' width=200px align='center'>
+
 Estou criando um Sistema de fluxo de caixa para mim, controlar minha finanças e abandonar as tabelas de excel
->>>>>>> 0d7715a3db4350d1d11d75631c7c5d048c66a2e1
+
 
 Api do sistema de financeiro 
 
