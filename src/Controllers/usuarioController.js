@@ -26,7 +26,7 @@ const usuarioController = {
       const usuarioEncontrado = verificarExistenciaUsuario[0];
 
       if (!usuarioEncontrado) {
-        resp.status(400).json("Senha ou Usuario incorretos");
+        resp.status(400).json({situation:false, msg:"Senha ou Usuario incorretos"});
         return;
       }
 
@@ -36,7 +36,7 @@ const usuarioController = {
       );
 
       if (!senhaEuserMatch) {
-        resp.status(400).json("Senha ou Usuario incorretos");
+        resp.status(400).json({situation:false, msg:"Senha ou Usuario incorretos"});
         return;
       }
 
