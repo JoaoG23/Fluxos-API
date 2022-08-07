@@ -19,7 +19,7 @@ const auth = {
         if (req.usuario.admin) {
             next();
         } else {
-            resp.status(401).json({situacao:false , msg:'Acesso negado: Você não é administrador..'});
+            resp.status(401).json({situacao:false , msg:'Acesso negado: Você não é administrador..', redirecionar:false });
         }
     }
 

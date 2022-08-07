@@ -54,6 +54,7 @@ const usuarioController = {
       resp
         .status(202)
         .json({
+          usuarioEncontrado,
           situation: true,
           msg: "Usuario logado com sucesso",
           tokenUser: token,
