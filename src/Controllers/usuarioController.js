@@ -24,6 +24,15 @@ const usuarioController = {
       );
 
       const usuarioEncontrado = verificarExistenciaUsuario[0];
+      const dadosUsuario = {
+        id:usuarioEncontrado.id_login,
+        nome:usuarioEncontrado.nome_login,
+        usuario:usuarioEncontrado.nomeusuario_login,
+        email:usuarioEncontrado.email_login,
+        telefone:usuarioEncontrado.tel_login,
+        admin:usuarioEncontrado.isadmin_login,
+        
+      }
 
       if (!usuarioEncontrado) {
         resp.status(400).json({situation:false, msg:"Senha ou Usuario incorretos"});
@@ -54,7 +63,7 @@ const usuarioController = {
       resp
         .status(202)
         .json({
-          usuarioEncontrado,
+          dadosUsuario,
           situation: true,
           msg: "Usuario logado com sucesso",
           tokenUser: token,
