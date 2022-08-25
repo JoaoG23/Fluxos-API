@@ -13,8 +13,7 @@ const loginRouter = require('./loginRouters');
 
 const auth = require('./Auth')
 
-// router.use('/admin/fluxo' , auth.comum,  auth.admin, fluxoCaixaRouter);
-router.use('/admin/fluxo' , fluxoCaixaRouter); // Lembre-se de voltar a rota correta.
+router.use('/admin/fluxo' , auth.comum,  auth.admin, fluxoCaixaRouter);
 router.use('/admin/elementos',  auth.comum,  auth.admin, elementosRouters);
 router.use('/admin/subelementos', auth.comum,  auth.admin,subelementosRouters);
 router.use('/admin/tipos', auth.comum,  auth.admin, tiposRouters);
