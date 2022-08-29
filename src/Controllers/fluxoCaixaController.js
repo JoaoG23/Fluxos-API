@@ -8,7 +8,7 @@ const fluxoController = {
 
         try {
             const dbc = await connect();
-            const sql = `CALL pr_ver_todos_todas_tabela_unidas();`;
+            const sql = `CALL pr_ver_todos_todas_tabela_unidas();`; 
             const query = await dbc.query(sql);
             const resposta = query[0][0];
             resp.json(resposta);
@@ -54,6 +54,9 @@ const fluxoController = {
             const descricao = req.body.descricao;
             const valor = req.body.valor;
 
+            const saldoEmConta = await services.currentBalance();
+            const saldoAtual = valor + parseFloat( saldoEmConta.resposta );
+
 
             const dbc = await connect();
             const sql = `CALL pr_inserir_fluxocaixa(?, ?, ?, ?, ?, ?, ?, ?, ?);`;
@@ -66,7 +69,7 @@ const fluxoController = {
                 nanotipos,
                 descricao,
                 valor,
-                0
+                saldoAtual
             ];
             const query = await dbc.query(sql, values);
 
@@ -97,6 +100,9 @@ const fluxoController = {
             }
 
             const dbc = await connect();
+
+            const atualizaValores = await services.updateCurrentBalance();
+            const saldoAtual = atualizaValores.resposta;
             const sql = `CALL pr_editar_fluxocaixa( ?,?, ?, ?, ?, ?, ?, ?, ?, ? );`;
             const values = [
                 idItemfluxoCaixa,
@@ -108,7 +114,7 @@ const fluxoController = {
                 nanotipos,
                 descricao,
                 valor,
-                0
+                saldoAtual
             ];
 
             const query = await dbc.query(sql, values);

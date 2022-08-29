@@ -165,6 +165,32 @@ const services = {
         } catch (error) {
             console.error(error);
         }
+    },
+    currentBalance: async () => {
+
+        try {
+            const dbc = await connect();
+            const sql = `CALL pr_ver_saldo_atual();`;
+            const respostaQuery = await dbc.query(sql);
+            const respostaFinal = respostaQuery[0][0][0];
+
+            return respostaFinal;
+        } catch (error) {
+            console.error(error);
+        }
+    },
+    updateCurrentBalance: async () => {
+
+        try {
+            const dbc = await connect();
+            const sql = `CALL pr_atualizar_saldoatual_fluxocaixa();`;
+            const respostaQuery = await dbc.query(sql);
+            const respostaFinal = respostaQuery[0][0];
+
+            return respostaFinal;
+        } catch (error) {
+            console.error(error);
+        }
     }
 
 }

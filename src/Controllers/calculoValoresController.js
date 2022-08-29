@@ -67,12 +67,8 @@ const calculoValoresController = {
     verSaldoAtual: async (req, resp) => {
 
         try {
-            const dbc = await connect();
-            const sql = `CALL pr_ver_saldo_atual();`;
-            const respostaQuery = await dbc.query(sql);
-            const respostaFinal = respostaQuery[0][0][0];
-
-            resp.json(respostaFinal);
+            const saldoAtual = await services.currentBalance();
+            resp.json(saldoAtual);
 
         } catch (error) {
             resp.status(404).send(error)
@@ -134,8 +130,6 @@ const calculoValoresController = {
     gastoPorCriterio: async (req, resp) => {
         try {
 
-            // nome da coluna
-            // mes 
             let mesInput = req.params.mes;
 
             const quantosIds = await services.countFieldForTable('tb_subelementos', 'idsubelementos');
@@ -162,9 +156,6 @@ const calculoValoresController = {
     },
     ganhoPorCriterio: async (req, resp) => {
         try {
-            // nome da coluna
-            // mes 
-            // coluna de ID 
             let mesInput = req.query.mes;
 
             const quantosIds = await services.countFieldForTable('tb_subelementos', 'idsubelementos'); // Para pesquisa do ultimo ID
