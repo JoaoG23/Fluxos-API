@@ -54,9 +54,6 @@ const fluxoController = {
             const descricao = req.body.descricao;
             const valor = req.body.valor;
 
-            const saldoEmConta = await services.currentBalance();
-            const saldoAtual = valor + parseFloat( saldoEmConta.resposta );
-
 
             const dbc = await connect();
             const sql = `CALL pr_inserir_fluxocaixa(?, ?, ?, ?, ?, ?, ?, ?, ?);`;
@@ -69,11 +66,14 @@ const fluxoController = {
                 nanotipos,
                 descricao,
                 valor,
-                saldoAtual
+                0
             ];
-            const query = await dbc.query(sql, values);
+            const queryInserir = await dbc.query(sql, values);
 
-            const respostaFinal = query[0][0][0].resposta;
+            const sqlAtualizarSaldo = `CALL pr_atualiza_saldoatual_fluxocaixa();`;
+            await dbc.query(sqlAtualizarSaldo);
+
+            const respostaFinal = queryInserir[0][0][0].resposta;
             resp.json(respostaFinal)
         } catch (error) {
             resp.status(404).send(error)
@@ -101,8 +101,6 @@ const fluxoController = {
 
             const dbc = await connect();
 
-            const atualizaValores = await services.updateCurrentBalance();
-            const saldoAtual = atualizaValores.resposta;
             const sql = `CALL pr_editar_fluxocaixa( ?,?, ?, ?, ?, ?, ?, ?, ?, ? );`;
             const values = [
                 idItemfluxoCaixa,
@@ -114,12 +112,15 @@ const fluxoController = {
                 nanotipos,
                 descricao,
                 valor,
-                saldoAtual
+                0
             ];
 
-            const query = await dbc.query(sql, values);
+            const queryEditar = await dbc.query(sql, values);
 
-            const respostaFinal = query[0][0][0].resposta;
+            const sqlAtualizarSaldo = `CALL pr_atualiza_saldoatual_fluxocaixa();`;
+            await dbc.query(sqlAtualizarSaldo);
+
+            const respostaFinal = queryEditar[0][0][0].resposta;
             resp.json(respostaFinal)
         } catch (error) {
             resp.status(404).json(error)
@@ -146,7 +147,11 @@ const fluxoController = {
             const deletarSql = `CALL pr_deletar_fluxocaixa(?);`;
             const queryDeletar = await dbc.query(deletarSql, values);
 
+            const sqlAtualizarSaldo = `CALL pr_atualiza_saldoatual_fluxocaixa();`;
+            await dbc.query(sqlAtualizarSaldo);
+
             const respostaFinal = queryDeletar[0][0][0].resposta;
+           
             resp.json(respostaFinal);
         } catch (error) {
             resp.status(404).send(error)
