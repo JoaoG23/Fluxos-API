@@ -40,6 +40,29 @@ const fluxoController = {
             resp.status(404).send(error);
         }
     },
+    verItemIDComIdCategoria: async (req, resp) => {
+
+        let idEncontrado = req.params.id;
+
+        try {
+            const dbc = await connect();
+            const sql = `CALL pr_selecionar_um('tb_fluxocaixa', 'id_item_fluxo',? );`;
+
+            // valida se ja existe id
+            const registroEncontrado = await services.ifExistsRegister("tb_fluxocaixa", "id_item_fluxo", idEncontrado);
+            if (registroEncontrado <= 0) {
+                resp.status(404).json({ msg: "Esse registro não existe no banco de dados" });
+                return;
+            }
+
+            const values = [idEncontrado];
+            const query = await dbc.query(sql, values);
+            const resposta = query[0][0];
+            resp.json(resposta);
+        } catch (error) {
+            resp.status(404).send(error);
+        }
+    },
 
     inserirItem: async (req, resp) => {
 

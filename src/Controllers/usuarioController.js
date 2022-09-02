@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 
 const services = require("./services");
 const { json } = require("express");
+const { loginValidate, registerValidate, editValidate } = require('./validateUsuario');
 
 const usuarioController = {
   tabela: "tb_login",
@@ -12,9 +13,12 @@ const usuarioController = {
 
   logar: async (req, resp) => {
     try {
+
+      const { error } = loginValidate(req.body);
+      if ( error ) { return resp.status(400).json(error.message) };
+
       const nomeUsuario = req.body.usuario;
       const senhaUsuario = req.body.senha;
-
 
 
       const verificarExistenciaUsuario = await services.listForName(
@@ -24,26 +28,24 @@ const usuarioController = {
       );
 
       const usuarioEncontrado = verificarExistenciaUsuario[0];
-      const dadosUsuario = {
-        id:usuarioEncontrado.id_login,
-        nome:usuarioEncontrado.nome_login,
-        usuario:usuarioEncontrado.nomeusuario_login,
-        email:usuarioEncontrado.email_login,
-        telefone:usuarioEncontrado.tel_login,
-        admin:usuarioEncontrado.isadmin_login,
-        
-      }
-
+      
       if (!usuarioEncontrado) {
+        console.error(usuarioEncontrado);
         resp.status(400).json({situation:false, msg:"Senha ou Usuario incorretos"});
         return;
+      }
+      const dadosUsuario = {
+        id:usuarioEncontrado.id_login,
+        usuario:usuarioEncontrado.nomeusuario_login,
+        admin:usuarioEncontrado.isadmin_login,
+        
       }
 
       const senhaEuserMatch = bcrypt.compareSync(
         senhaUsuario,
         usuarioEncontrado.senha_login
       );
-
+      
       if (!senhaEuserMatch) {
         resp.status(400).json({situation:false, msg:"Senha ou Usuario incorretos"});
         return;
@@ -52,7 +54,6 @@ const usuarioController = {
       const token = jwt.sign(
         {
           id: usuarioEncontrado.id_login,
-          email: usuarioEncontrado.email_login,
           admin: usuarioEncontrado.isadmin_login,
         },
         process.env.TOKEN_SECRET,
@@ -61,7 +62,7 @@ const usuarioController = {
 
       resp.header("authorization-token", token);
       resp
-        .status(202)
+        .status(200)
         .json({
           dadosUsuario,
           situation: true,
@@ -98,7 +99,13 @@ const usuarioController = {
   },
 
   registrar: async (req, resp) => {
+
+
     try {
+
+      const { error } = registerValidate(req.body);
+      if ( error ) { return resp.status(400).json(error.message) };
+
       const dbc = await connect();
       const nome = req.body.nomeusuario;
       const login = req.body.login;
@@ -111,7 +118,6 @@ const usuarioController = {
       const queryRegistrar = await dbc.query(verificarSql, values);
       const resposta = queryRegistrar[0][0][0];
 
-      console.info(resposta);
       resp.status(201).json(resposta);
     } catch (error) {
       if (error.sqlState == 23000) {
@@ -148,7 +154,10 @@ const usuarioController = {
     try {
       const dbc = await connect();
 
-      let emailUsuario = req.body.id;
+      const { error } = editValidate(req.body);
+      if ( error ) { return resp.status(400).json(error.message) };
+
+      let id = req.body.id;
       const nome = req.body.nomeusuario;
       const login = req.body.login;
       const senha = bcrypt.hashSync(req.body.senha);
@@ -157,7 +166,7 @@ const usuarioController = {
       const admin = req.body.admin;
 
       const verificarSql = `CALL pr_editar_usuario( ? , ? , ? , ? , ? , ?, ? )`;
-      const values = [emailUsuario, nome, login, senha, email, tel, admin];
+      const values = [id, nome, login, senha, email, tel, admin];
       const queryRegistrar = await dbc.query(verificarSql, values);
       const resposta = queryRegistrar[0][0][0].resposta;
 
