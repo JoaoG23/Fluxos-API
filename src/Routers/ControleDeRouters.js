@@ -1,4 +1,5 @@
 const express = require('express'); 
+
 const router = express.Router(); 
 const fluxoCaixaRouter = require('./fluxoCaixaRouters');
 const elementosRouters = require('./elementosRouters');
@@ -23,6 +24,7 @@ router.use('/admin/nanotipos', auth.comum,  auth.admin, nanotiposRouters);
 router.use('/admin/usuario', auth.comum,  auth.admin ,usuarioRouter);
 router.use('/calculos',  auth.comum,  calculoValoresRouters);
 router.use('/login', loginRouter);
+
 
 
 module.exports = router;

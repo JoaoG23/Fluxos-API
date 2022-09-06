@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 
 const services = require("./services");
 const { json } = require("express");
-const { loginValidate, registerValidate, editValidate } = require('./validateUsuario');
+const { registerValidate, editValidate } = require('./validateUsuario');
 
 const usuarioController = {
   tabela: "tb_login",
@@ -14,8 +14,8 @@ const usuarioController = {
   logar: async (req, resp) => {
     try {
 
-      const { error } = loginValidate(req.body);
-      if ( error ) { return resp.status(400).json(error.message) };
+      // const { error } = loginValidate(req.body);
+      // if ( error ) { return resp.status(400).json(error.message) };
 
       const nomeUsuario = req.body.usuario;
       const senhaUsuario = req.body.senha;
