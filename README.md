@@ -109,10 +109,70 @@ Exemplo: Fluxo de caixa:
 
 ## Como Instalar 🪛
 
-1. Tenha o node instalado em seu PC
-2. Faça o clone
-3. Instale as variavel de ambiente
-4. De NPM Start
+**Usarem o Mysql workbeanch em nosso tutorial**
+
+1.Tenha um **NODEjs** e **Mysql 8.0** instalado.
+
+2. Clone o projeto.
+
+3. Importe o dump do banco de dados. Localizado no caminho abaixo:
+
+
+        Model\dblfluxosnodb20220902.sql
+
+
+
+<img  align='left' src="./assets/dbimport.png">
+
+
+4. Nomeie um Schema da importação conforme o seu critério com a imagem:
+
+<img  align=center src="./assets/dbconfigs.png">
+
+
+4. Entre no Diretorio no **CMD ou em Outro terminal** de comando.
+
+5. Em seguida volte na pasta raiz
+
+
+6. **ATENÇÃO** Após isso digite o npm install se caso o dotenv nao for instalado dentro da pasta **raiz** do projeto.
+
+7. Após isso crie um **.env** na pasta **raiz** e configure apontando para sua base de dados. Conforme abaixo ou como sua preferencia :
+
+Exemplo nao preenchido no arquivo .env.example:
+
+                PORT_SERVIDOR=
+
+                USERDB=
+                PORTDB=
+                HOSTDB=
+                DATABASE=
+                PASSWORD=
+
+                TOKEN_SECRET=
+
+
+Exemplo preenchido  .env:
+
+
+                PORT_SERVIDOR=3000
+
+                USERDB="root"
+                PORTDB=3306
+                HOSTDB="127.0.0.1"
+                DATABASE="db_controllerfluxo"
+                PASSWORD="admin"
+
+                TOKEN_SECRET="joao"
+
+
+
+8.Após volte para pasta **raiz** e digite seguinte comando abaixo:
+
+        npm start
+
+
+
 5. TCHAM RAMMM Rodando !
 6. Use uma API de teste do seu agrado. Ex:Postman, ou Insommia.
 7. Importe o arquivo HAR. Path: /api/api-fluxos-v1-har
