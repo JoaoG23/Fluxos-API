@@ -36,7 +36,7 @@ const usuarioController = {
       }
       const dadosUsuario = {
         id:usuarioEncontrado.id_login,
-        usuario:usuarioEncontrado.nomeusuario_login,
+        usuario:usuarioEncontrado.nome_login,
         admin:usuarioEncontrado.isadmin_login,
         
       }

@@ -7,8 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "nodemon init.js",
-    "start": "node init.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",

@@ -1,0 +1,7 @@
+ATENÇÃO:    
+Lembre-se comenta o <base href='/'> no
+public antes de buildar com 
+react app
+
+e retire o . no script para corrigir o erro 
+no index bildado.
