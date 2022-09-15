@@ -175,6 +175,30 @@ const usuarioController = {
       resp.status(400).json(error);
     }
   },
+  editarSemSenha: async (req, resp) => {
+    try {
+      const dbc = await connect();
+
+      const { error } = editValidate(req.body);
+      if ( error ) { return resp.status(400).json(error.message) };
+
+      let id = req.body.id;
+      const nome = req.body.nomeusuario;
+      const login = req.body.login;
+      const email = req.body.email;
+      const tel = req.body.telefone;
+      const admin = req.body.admin;
+
+      const verificarSql = `CALL pr_editar_usuario( ? , ? , ? , ? , ?, ? )`;
+      const values = [id, nome, login, email, tel, admin];
+      const queryRegistrar = await dbc.query(verificarSql, values);
+      const resposta = queryRegistrar[0][0][0].resposta;
+
+      resp.json(resposta);
+    } catch (error) {
+      resp.status(400).json(error);
+    }
+  },
 
   consultaEmail: async (req, resp) => {
     // Em Breve >>>>>

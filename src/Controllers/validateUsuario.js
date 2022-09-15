@@ -17,7 +17,7 @@ const editValidate = ( data ) => {
         id: Joi.number().required(),
         nomeusuario: Joi.string().required().min(3).max(50),
         login: Joi.string().required().min(6).max(50),
-        senha: Joi.string().required().min(6).max(50),
+        senha: Joi.string(),
         email: Joi.string().required().min(6).max(50),
         telefone: Joi.string().required().max(50),
         admin: Joi.boolean()

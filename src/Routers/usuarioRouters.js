@@ -8,6 +8,6 @@ router.get("/:id", usuarioController.verUmPeloId);
 router.post("/", usuarioController.registrar);
 router.delete("/:id", usuarioController.deletar);
 router.delete("/", usuarioController.deletar);
-router.put("/", usuarioController.editar);
+router.put("/", usuarioController.editarSemSenha);
 
 module.exports = router;
