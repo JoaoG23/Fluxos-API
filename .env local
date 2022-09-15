@@ -1,0 +1,9 @@
+TOKEN_SECRET=joao
+
+PORT_SERVIDOR=3211
+
+USER_DB=root
+PORT_DB=3306
+HOST_DB=localhost
+DATABASE=db_controllerfluxo
+PASSWORD_DB=admin

@@ -1,0 +1,1873 @@
+_type: export
+__export_format: 4
+__export_date: 2022-09-13T22:03:18.558Z
+__export_source: insomnia.desktop.app:v2022.5.1
+resources:
+  - _id: req_dcb492a360734f9e9c8ec3ada73ff8ca
+    parentId: fld_ea1d069378d4467d841768d785719d33
+    modified: 1663101149450
+    created: 1663101145901
+    url: "{{ _.urladmin }}usuario/"
+    name: Registrar
+    description: |
+      Rota para registro de usuario para os sistema.
+      **Obs:** _permissão somente para admins_
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nomeusuario":"Olaaaa",
+        	"login":"Olaaaa",
+        	"senha":"Olaaaa",
+        	"email":"Olaaa@osoo.com",
+        	"telefone":"318888-8888"
+        }
+    parameters: []
+    headers:
+      - name: authorization-token
+        value: "{{ _.adminToken }}"
+        id: pair_178e2edf94764735ad2232f4f1c97565
+      - id: pair_18eff046175a4aaf90d1245de119b915
+        name: Content-Type
+        value: application/json
+        description: ""
+    authentication: {}
+    metaSortKey: -1658678713849
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_ea1d069378d4467d841768d785719d33
+    parentId: wrk_e0416ce97cb94c9c8b2ed2ade6ccb21a
+    modified: 1663101145900
+    created: 1663101145900
+    name: Login
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1658678712001
+    _type: request_group
+  - _id: wrk_e0416ce97cb94c9c8b2ed2ade6ccb21a
+    parentId: null
+    modified: 1663101145744
+    created: 1663101145744
+    name: Fluxos-API-Producao
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_a100afd15e304aa6ae42fd20fa8ae27c
+    parentId: fld_ea1d069378d4467d841768d785719d33
+    modified: 1663101546213
+    created: 1663101145914
+    url: "{{ _.urlcomun }}login/registrar/"
+    name: Registrar Global
+    description: |
+      Rota para registro de usuario para os sistema.
+      **Obs:** _permissão somente para admins_
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nomeusuario":"Olaaaa",
+        	"login":"Olaaaa",
+        	"senha":"Olaaaa",
+        	"email":"Olaaa@osoo.com",
+        	"telefone":"318888-8888"
+        }
+    parameters: []
+    headers:
+      - name: authorization-token
+        value: "{{ _.adminToken }}"
+        id: pair_178e2edf94764735ad2232f4f1c97565
+      - id: pair_18eff046175a4aaf90d1245de119b915
+        name: Content-Type
+        value: application/json
+        description: ""
+    authentication: {}
+    metaSortKey: -1658658178530.8125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_eeb7fb7cf3b14cb991dacdca9665e817
+    parentId: fld_ea1d069378d4467d841768d785719d33
+    modified: 1663101485945
+    created: 1663101145910
+    url: "{{ _.urladmin }}usuario/"
+    name: Atualizar
+    description: |-
+      Para atualizar algum dado do usuário 
+
+      **Obs:** _permissão somente para admins_
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id": 52,
+        	"nomeusuario": "Zachary",
+        	"login": "Zachary",
+        	"senha": "Zachary",
+        	"email": "Zachary@betadev.com",
+        	"telefone": "318888-8888",
+        	"admin": true
+        }
+    parameters: []
+    headers:
+      - name: authorization-token
+        value: "{{ _.adminToken }}"
+        id: pair_178e2edf94764735ad2232f4f1c97565
+      - id: pair_166d97bd743e4a9b8eb126d0ecbe2b3c
+        name: Content-Type
+        value: application/json
+        description: ""
+    authentication: {}
+    metaSortKey: -1658637643212.625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_20eb4dc63211407a88cf71e5e947a548
+    parentId: fld_ea1d069378d4467d841768d785719d33
+    modified: 1663101541061
+    created: 1663101145906
+    url: "{{ _.urlcomun }}login"
+    name: Login
+    description: |-
+      Rota para realizar login da aplicação
+      exemplo veja o body
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"usuario": "",
+        	"senha": "joaodev"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_178e2edf94764735ad2232f4f1c97565
+    authentication: {}
+    metaSortKey: -1658596572576.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d84feb6392bd49cabd09ea31cd505f10
+    parentId: fld_ea1d069378d4467d841768d785719d33
+    modified: 1663101895713
+    created: 1663101145908
+    url: "{{ _.urladmin }}usuario/"
+    name: Remover
+    description: |-
+      Removendo um usuário...
+
+      **Obs:** _permissão somente para admins_
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id":78
+        }
+    parameters: []
+    headers:
+      - name: authorization-token
+        value: "{{ _.adminToken }}"
+        id: pair_178e2edf94764735ad2232f4f1c97565
+      - id: pair_be2ca142b08249389324db648294ef54
+        name: Content-Type
+        value: application/json
+        description: ""
+    authentication: {}
+    metaSortKey: -1658555501939.875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f48e15afe7d14e1390712c0de9f8ff49
+    parentId: fld_ea1d069378d4467d841768d785719d33
+    modified: 1663101145912
+    created: 1663101145912
+    url: "{{ _.urladmin }}usuario/52"
+    name: Ver pelo Id
+    description: |-
+      Para visualizar apenas um usuário:
+
+      **Obs: permissão somente para admins**
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: authorization-token
+        value: "{{ _.adminToken }}"
+        id: pair_178e2edf94764735ad2232f4f1c97565
+    authentication: {}
+    metaSortKey: -1658534966621.6875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_921d440d31574a26919c90d13840593e
+    parentId: fld_ea1d069378d4467d841768d785719d33
+    modified: 1663101557989
+    created: 1663101145903
+    url: "{{ _.urladmin }}usuario/"
+    name: Ver todos
+    description: |-
+      Ver todos os usuários
+
+      **Obs:permissão somente para admins**
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_1419c10f7dfd4b7b8b81bbcb7a4bb44c
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1658514431303.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7048c0daa4364300830fcf6b9371b597
+    parentId: fld_c2a3ef67c4684657abe8f0c2a8ec77f4
+    modified: 1663101145783
+    created: 1663101145783
+    url: "{{ _.urladmin }}elementos"
+    name: Ver todos tipos
+    description: >-
+      Um dos tipos de classifição para melhor seleção do item do meu fluxo de
+      caixa....
+
+
+      **Obs: permissão somente para admins** 
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_e359979b33ca4f2f9b5e8412d424e39f
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966928.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_c2a3ef67c4684657abe8f0c2a8ec77f4
+    parentId: wrk_e0416ce97cb94c9c8b2ed2ade6ccb21a
+    modified: 1663101145781
+    created: 1663101145781
+    name: Elementos
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1657724763586
+    _type: request_group
+  - _id: req_be490a66ed3e4c2db022374c30f5690f
+    parentId: fld_c2a3ef67c4684657abe8f0c2a8ec77f4
+    modified: 1663101145796
+    created: 1663101145796
+    url: "{{ _.urladmin }}elementos/1"
+    name: Ver pelo ID
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_0f946ee40f1b4280984db7113f30de04
+        name: authorization-token
+        value: "{{ _.comumToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966909.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ff9eb533def64057b4592a2658cfbbc8
+    parentId: fld_c2a3ef67c4684657abe8f0c2a8ec77f4
+    modified: 1663101145785
+    created: 1663101145785
+    url: "{{ _.urladmin }}elementos"
+    name: Inserir
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome_elementos":"passivo"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_b067ab336bc944bca7b0dc0ffa73b63b
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966878.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4ddd69f1b7de456898258d9a634313fc
+    parentId: fld_c2a3ef67c4684657abe8f0c2a8ec77f4
+    modified: 1663101145793
+    created: 1663101145793
+    url: "{{ _.urladmin }}elementos"
+    name: Editar
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id_elementos":3,
+        	"nome_elementos":"Passivo"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_0eb123a406c646fa822f859f5f254be8
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966875.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9ae550b052d449d295492a995e63ec58
+    parentId: fld_c2a3ef67c4684657abe8f0c2a8ec77f4
+    modified: 1663101145787
+    created: 1663101145787
+    url: "{{ _.urladmin }}elementos/"
+    name: Deletar
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id_elementos":4
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_0f6716188e444897a6d30668d581e059
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966872.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2ec3802fda054092b57e0793cb3a71de
+    parentId: fld_c2a3ef67c4684657abe8f0c2a8ec77f4
+    modified: 1663101145790
+    created: 1663101145790
+    url: "{{ _.urladmin }}elementos/5"
+    name: Deletar Params
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_659140324a72410f9d00263b65143c07
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966869.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8259daa30dee413d9dd36425704e8b0a
+    parentId: fld_8d4d9500bb8e42e8bfbd47ed8b788965
+    modified: 1663101145883
+    created: 1663101145883
+    url: "{{ _.urlcomun }}calculos/mesatualgasto/"
+    name: Todos Gastos mês atual
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_34acb62db24a4585945e80b6e55cef2d
+        name: authorization-token
+        value: "{{ _.comumToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966928.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_8d4d9500bb8e42e8bfbd47ed8b788965
+    parentId: wrk_e0416ce97cb94c9c8b2ed2ade6ccb21a
+    modified: 1663101145882
+    created: 1663101145882
+    name: Calculo De Valores
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1657724763579.75
+    _type: request_group
+  - _id: req_bef17eb8289349e6a2ae76ceee44f691
+    parentId: fld_8d4d9500bb8e42e8bfbd47ed8b788965
+    modified: 1663101145886
+    created: 1663101145886
+    url: "{{ _.urlcomun }}calculos/mesatualganho/"
+    name: Todos Ganhos mês atual
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_227b5bd46a4346ba99f11b45878e9838
+        name: authorization-token
+        value: "{{ _.comumToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966919.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_304f402024084ccbbbe2d1ddbc78c85e
+    parentId: fld_8d4d9500bb8e42e8bfbd47ed8b788965
+    modified: 1663101145888
+    created: 1663101145888
+    url: "{{ _.urlcomun }}calculos/saldoatual/"
+    name: Ver Saldo Atual
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_b4c6ac35ba2f4622b1f0ea8bb986218e
+        name: authorization-token
+        value: "{{ _.comumToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966914.4375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a30f5889ba674523b38dd94f6a436315
+    parentId: fld_8d4d9500bb8e42e8bfbd47ed8b788965
+    modified: 1663101145890
+    created: 1663101145890
+    url: "{{ _.urlcomun }}calculos/gastoultimo12/2022"
+    name: Gasto do Ultimos 12 meses
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_c6c33f3bc9504c2abe8d19e2081bcb34
+        name: authorization-token
+        value: "{{ _.comumToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966912.0938
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2c115116510a4c8b8f8a22f6c2214486
+    parentId: fld_8d4d9500bb8e42e8bfbd47ed8b788965
+    modified: 1663101145893
+    created: 1663101145893
+    url: "{{ _.urlcomun }}calculos/ganhoultimo12/2022"
+    name: Ganho do Ultimos 12 meses
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_9439498e812347a2818d37c3502d0b50
+        name: ""
+        value: ""
+        description: ""
+    headers:
+      - id: pair_348ead1828064ae29a8cc2e48409eeed
+        name: authorization-token
+        value: "{{ _.comumToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966910.9219
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4acbd108b9c8430cb8d7918adafc88c4
+    parentId: fld_8d4d9500bb8e42e8bfbd47ed8b788965
+    modified: 1663101145898
+    created: 1663101145898
+    url: "{{ _.urlcomun }}calculos/gastosubelementos"
+    name: Gasto por Subelementos
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_527c3aa3da734436973f5c549b380d25
+        name: mes
+        value: "7"
+        description: ""
+    headers:
+      - id: pair_900bd2e6571c46359482a42d5100c64e
+        name: authorization-token
+        value: "{{ _.comumToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966910.043
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_375e8c0d3b2d40a39cd27c4260c85c89
+    parentId: fld_8d4d9500bb8e42e8bfbd47ed8b788965
+    modified: 1663101145895
+    created: 1663101145895
+    url: "{{ _.urlcomun }}calculos/ganhosubelementos/"
+    name: Ganho por Subelementos
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_62bfece4a1a841d88b903803f96231bc
+        name: mes
+        value: "7"
+        description: ""
+    headers:
+      - id: pair_f46708f324ec49a3ae5e4d10bc161770
+        name: authorization-token
+        value: "{{ _.comumToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966860.043
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5fc6a42b13e64ec68355a0e1258f920b
+    parentId: fld_ab6e42bfa9cf48d3a53d377b86349c7f
+    modified: 1663101145800
+    created: 1663101145800
+    url: "{{ _.urladmin }}subelementos/"
+    name: Ver todos tipos
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_7991181324e04c3f8f873d9782ea523d
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966928.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_ab6e42bfa9cf48d3a53d377b86349c7f
+    parentId: wrk_e0416ce97cb94c9c8b2ed2ade6ccb21a
+    modified: 1663101145799
+    created: 1663101145799
+    name: " Subelementos"
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1657724763573.5
+    _type: request_group
+  - _id: req_824f8db30349491ea29f99931bae6920
+    parentId: fld_ab6e42bfa9cf48d3a53d377b86349c7f
+    modified: 1663101145814
+    created: 1663101145814
+    url: "{{ _.urladmin }}subelementos/1"
+    name: Ver pelo ID
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_586e7f56af2241ecbbb99a4921d992b0
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966909.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e6c932ab62c948a89ae1f5237d9d97e5
+    parentId: fld_ab6e42bfa9cf48d3a53d377b86349c7f
+    modified: 1663101145803
+    created: 1663101145803
+    url: "{{ _.urladmin }}subelementos"
+    name: Inserir
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome_subelemento":"Entradas"
+        }
+    parameters: []
+    headers:
+      - name: authorization-token
+        value: "{{ _.adminToken }}"
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_1146d555b24c4f1d86e0366ca1ab817e
+        name: Content-Type
+        value: application/json
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966878.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_429c7bd74b344f87a4f5e6fb01d9391b
+    parentId: fld_ab6e42bfa9cf48d3a53d377b86349c7f
+    modified: 1663101145811
+    created: 1663101145811
+    url: "{{ _.urladmin }}subelementos"
+    name: Editar
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id_subelementos":2,
+        	"nome_subelementos":"Atualizacao de teste"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_bce21eff3d4140d196ce70f6cddd3484
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966875.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_850d29312aed4d9ca278738b5475504a
+    parentId: fld_ab6e42bfa9cf48d3a53d377b86349c7f
+    modified: 1663101145805
+    created: 1663101145805
+    url: "{{ _.urladmin }}subelementos/"
+    name: Deletar
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id_subelementos":2
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_fbd97762f6614425b9e7fb5ef02509a0
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966873.8125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_18f1f7c4a012479e81601eec9c44c2b5
+    parentId: fld_ab6e42bfa9cf48d3a53d377b86349c7f
+    modified: 1663101145809
+    created: 1663101145809
+    url: "{{ _.urladmin }}subelementos/12"
+    name: Deletar Params
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_04f4399e208846a2a8b90480e94f6ef3
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966869.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_80d6d9b5c84240a39fae29a0c8360abc
+    parentId: fld_a9db3ab7f1934458a8a593954d21d834
+    modified: 1663101145818
+    created: 1663101145818
+    url: "{{ _.urladmin }}tipos/"
+    name: Ver todos tipos
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_898dabcdfded4d1dac1dd3a288fffb3c
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966928.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_a9db3ab7f1934458a8a593954d21d834
+    parentId: wrk_e0416ce97cb94c9c8b2ed2ade6ccb21a
+    modified: 1663101145816
+    created: 1663101145816
+    name: Tipos
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1657724763567.25
+    _type: request_group
+  - _id: req_827f22953ba14646b43c6f618c4197ed
+    parentId: fld_a9db3ab7f1934458a8a593954d21d834
+    modified: 1663101145829
+    created: 1663101145829
+    url: "{{ _.urladmin }}tipos/1"
+    name: Ver pelo ID
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_27d8efe99ad640b7820a9fd4e27a2764
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+      - id: pair_f77b43170a73417387909073a2b261a9
+        name: ""
+        value: ""
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966909.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_01032ace889543a0bc753531384e2099
+    parentId: fld_a9db3ab7f1934458a8a593954d21d834
+    modified: 1663101145820
+    created: 1663101145820
+    url: "{{ _.urladmin }}tipos/"
+    name: Inserir
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome_tipos":"Investimentos"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_e81d69751d6348458d2f4911c693bc7b
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966878.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_488bc6af949f4717a485a7a010430c03
+    parentId: fld_a9db3ab7f1934458a8a593954d21d834
+    modified: 1663101145827
+    created: 1663101145827
+    url: "{{ _.urladmin }}tipos/"
+    name: Editar
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id_tipos":4,
+        	"nome_tipos":"Atualizacao de teste"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_d799b4d6e30f48c2a0652ff651a21d23
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966875.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_644bd2d43d1b4683b65eaa93ab407ea2
+    parentId: fld_a9db3ab7f1934458a8a593954d21d834
+    modified: 1663101145822
+    created: 1663101145822
+    url: "{{ _.urladmin }}tipos/"
+    name: Deletar
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id_tipos":3
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_f431df7c1f624d268b982adce5e79169
+        name: Content-Type
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966873.8125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_64d22b36ba4d4556b1a3587e3c1fff1b
+    parentId: fld_a9db3ab7f1934458a8a593954d21d834
+    modified: 1663101145825
+    created: 1663101145825
+    url: "{{ _.urladmin }}tipos/4"
+    name: Deletar Params
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_4c1c11b145c84a02a5938ffcb66e47ef
+        name: Content-Type
+        value: ""
+        description: ""
+      - id: pair_15588e94ecc944d3ad92270cd02edd63
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966869.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_335f91ecab19425699ff3aac754c022b
+    parentId: fld_02ee8bf6999e4dbdb9449aa5179d091d
+    modified: 1663101145834
+    created: 1663101145834
+    url: "{{ _.urladmin }}subtipos/"
+    name: Ver todos tipos
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_0851d44551174fa6815bb9464e168a32
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966928.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_02ee8bf6999e4dbdb9449aa5179d091d
+    parentId: wrk_e0416ce97cb94c9c8b2ed2ade6ccb21a
+    modified: 1663101145833
+    created: 1663101145833
+    name: Subtipos
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1657724763564.125
+    _type: request_group
+  - _id: req_f0a02e5c70b0424d90a3cae9fe96c97b
+    parentId: fld_02ee8bf6999e4dbdb9449aa5179d091d
+    modified: 1663101145846
+    created: 1663101145846
+    url: "{{ _.urladmin }}subtipos/1"
+    name: Ver pelo ID
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_8799ea6bc07b4e859c58a0f27753e7f3
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+      - id: pair_a1fd7046445b42a6a086fae0bccca6f0
+        name: ""
+        value: ""
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966909.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_964a169d386048ffbec82d0fcf3ec02d
+    parentId: fld_02ee8bf6999e4dbdb9449aa5179d091d
+    modified: 1663101145836
+    created: 1663101145836
+    url: "{{ _.urladmin }}subtipos/"
+    name: Inserir
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome_subtipos":"Renda Variável"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_39048d78d3a24ea796f0c2c4bb71d307
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966878.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f23554c12f3a4ecabe2c60f1081e13f2
+    parentId: fld_02ee8bf6999e4dbdb9449aa5179d091d
+    modified: 1663101145844
+    created: 1663101145844
+    url: "{{ _.urladmin }}subtipos/"
+    name: Editar
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id_subtipos":4,
+        	"nome_subtipos":"Atualizacao de teste"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_9651b0c0792f41d18eac8498cfa2e086
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966875.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2f86d2e1fb444937bb7e4db4e827eb5d
+    parentId: fld_02ee8bf6999e4dbdb9449aa5179d091d
+    modified: 1663101145838
+    created: 1663101145838
+    url: "{{ _.urladmin }}subtipos/"
+    name: Deletar
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id_subtipos":4
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_5c04dfa4e8b04687ba46cab1eca2323e
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966873.8125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f982f366736c4b749978ed1bb1a08156
+    parentId: fld_02ee8bf6999e4dbdb9449aa5179d091d
+    modified: 1663101145841
+    created: 1663101145841
+    url: "{{ _.urladmin }}subtipos/4"
+    name: Deletar Params
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_f52c44e056de4329a60d2c94308e94c9
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966869.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_11044563b60143988e24cbd1cd36e5d0
+    parentId: fld_f7443d5fd3cd478c9bb30245ef96b0df
+    modified: 1663101145868
+    created: 1663101145868
+    url: "{{ _.urladmin }}minitipos/"
+    name: Ver todos tipos
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_b6a16808bc8647099e09aa3b7c9b522f
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966928.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_f7443d5fd3cd478c9bb30245ef96b0df
+    parentId: wrk_e0416ce97cb94c9c8b2ed2ade6ccb21a
+    modified: 1663101145866
+    created: 1663101145866
+    name: Minitipos
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1657724763561.7812
+    _type: request_group
+  - _id: req_f777ca1a538f493183ef26e828c472a1
+    parentId: fld_f7443d5fd3cd478c9bb30245ef96b0df
+    modified: 1663101145879
+    created: 1663101145879
+    url: "{{ _.urladmin }}minitipos/1"
+    name: Ver pelo ID
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_d2da8abc7fff4c49960214a2c4d7bed5
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966909.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_877c8c20b67646bf92fe784909b1957c
+    parentId: fld_f7443d5fd3cd478c9bb30245ef96b0df
+    modified: 1663101145870
+    created: 1663101145870
+    url: "{{ _.urladmin }}minitipos/"
+    name: Inserir
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome_minitipos":"Tesouro Direto"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_79d05c5cdd044b4881a9fb2e23780006
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966878.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_693a22133ad741f48f1df81f26cb08d9
+    parentId: fld_f7443d5fd3cd478c9bb30245ef96b0df
+    modified: 1663101145877
+    created: 1663101145877
+    url: "{{ _.urladmin }}minitipos/"
+    name: Editar
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id_minitipos":2,
+        	"nome_minitipos":"Atualizacao de teste"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_bdcf33c59d8e42e0bf38385cbe55c754
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966875.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_dcfce3500594451bb2a108be179197ef
+    parentId: fld_f7443d5fd3cd478c9bb30245ef96b0df
+    modified: 1663101145872
+    created: 1663101145872
+    url: "{{ _.urladmin }}minitipos/"
+    name: Deletar
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id_minitipos":2
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_d956fc77737149f7b0a33ae4defcfced
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966873.8125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_bc0da0afa346467c86c2a566f02ee5c2
+    parentId: fld_f7443d5fd3cd478c9bb30245ef96b0df
+    modified: 1663101145875
+    created: 1663101145875
+    url: "{{ _.urladmin }}minitipos/4"
+    name: Deletar Params
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_0606d812cbe64fed89d8e704e08c4561
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966869.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6f8e132c6d454623b554f8b7654e5db0
+    parentId: fld_87259d2c3d1d49c5ba156311149d7923
+    modified: 1663101145850
+    created: 1663101145850
+    url: "{{ _.urladmin }}nanotipos/"
+    name: Ver todos tipos
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_f68c74aa1aeb4f5c8d6244ee8f51ff28
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966928.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_87259d2c3d1d49c5ba156311149d7923
+    parentId: wrk_e0416ce97cb94c9c8b2ed2ade6ccb21a
+    modified: 1663101145849
+    created: 1663101145849
+    name: Nanotipos
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1657724763561.3906
+    _type: request_group
+  - _id: req_d7a5258976874d6d93575c4f97ad0297
+    parentId: fld_87259d2c3d1d49c5ba156311149d7923
+    modified: 1663101145862
+    created: 1663101145862
+    url: "{{ _.urladmin }}nanotipos/"
+    name: Ver pelo ID
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_d9387e4a63094e50a224bdc5d3a373a6
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966909.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_125d5d29ffbf461ca3551a243e350551
+    parentId: fld_87259d2c3d1d49c5ba156311149d7923
+    modified: 1663101145853
+    created: 1663101145853
+    url: "{{ _.urladmin }}nanotipos/"
+    name: Inserir
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome_nanotipos":"Clean"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_a5b7098317524dd08f3a655998d955b1
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966878.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cf6878c1295c473fbbd24ec5ebf3f5b3
+    parentId: fld_87259d2c3d1d49c5ba156311149d7923
+    modified: 1663101145860
+    created: 1663101145860
+    url: "{{ _.urladmin }}nanotipos/"
+    name: Editar
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id_nanotipos":2,
+        	"nome_nanotipos":"Atualizacao de teste"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_64f11726495c4a5886a21033f6035cbc
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966875.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b233f627fd944aa0961d3c5adf17fc65
+    parentId: fld_87259d2c3d1d49c5ba156311149d7923
+    modified: 1663101145855
+    created: 1663101145855
+    url: "{{ _.urladmin }}nanotipos/"
+    name: Deletar
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id_nanotipos":2
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_ead7dec6571649718b63f9579104e3da
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966873.8125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3342024a8d99416eb1fbe98568ecb80d
+    parentId: fld_87259d2c3d1d49c5ba156311149d7923
+    modified: 1663101145857
+    created: 1663101145857
+    url: "{{ _.urladmin }}nanotipos/4"
+    name: Deletar Params
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_e8a0c388c63446a5b5d40ed3cca2a8c8
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966869.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2f3b8c7b51dc430f8018fba7d81671ba
+    parentId: fld_6f9f26e00b264e5690d6d3a12f799f10
+    modified: 1663101145761
+    created: 1663101145761
+    url: "{{ _.urladmin }}fluxo/"
+    name: Todos os Items
+    description: |-
+      Mostra todos o items conforme os dados existentes...
+
+      Exemplo baixo:
+
+      	{
+      		"id_item_fluxo": 4,
+      		"dia_item_fluxo": 22,
+      		"mes_item_fluxo": 7,
+      		"ano_item_fluxo": 2022,
+      		"hora_item_fluxo": "18:31:58",
+      		"descricao_elementos": "",
+      		"descricao_subelementos": "",
+      		"descricao_tipos": "",
+      		"descricao_subtipos": "",
+      		"descricao_minitipos": "",
+      		"descricao_nanotipos": "",
+      		"descricao_item_fluxo": "Comprei pao",
+      		"valor_item_fluxo": "-21.00",
+      		"saldo_atual": "179.00"
+      	}
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_5f6156c554d349e79558727647514930
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966941
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_6f9f26e00b264e5690d6d3a12f799f10
+    parentId: wrk_e0416ce97cb94c9c8b2ed2ade6ccb21a
+    modified: 1663101145756
+    created: 1663101145756
+    name: Fluxo de Caixa
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1657724763561
+    _type: request_group
+  - _id: req_d64c560d0e1e4f29971c3bdacbcc0b02
+    parentId: fld_6f9f26e00b264e5690d6d3a12f799f10
+    modified: 1663101145770
+    created: 1663101145770
+    url: "{{ _.urladmin }}fluxo/117"
+    name: Item por ID params
+    description: "\n"
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_afa9e6a3b1264e548371e3aa0ec3a5fc
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966934.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e1476e9db8c649cc9c2d977214349dbb
+    parentId: fld_6f9f26e00b264e5690d6d3a12f799f10
+    modified: 1663101145778
+    created: 1663101145778
+    url: "{{ _.urladmin }}fluxo/numero/117"
+    name: Ver um item do Fluxo por ID e categoria com Numero ID dela
+    description: "\n"
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_afa9e6a3b1264e548371e3aa0ec3a5fc
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966931.625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9d75d3ac071849af980f79052e30fa97
+    parentId: fld_6f9f26e00b264e5690d6d3a12f799f10
+    modified: 1663101145763
+    created: 1663101145763
+    url: "{{ _.urladmin }}fluxo/"
+    name: Inserir Items
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"elemento":3,
+        	"subelementos":3,
+        	"tipos":1,
+        	"subtipos":1,
+        	"minitipos":1,
+        	"nanotipos":1,
+        	"descricao":"Calculos de Teste Tela",
+        	"valor":-76.89
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_01f3f5731420495ca50425f68ab3faee
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966891
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5788f6d338274f08860d2afe1608a9fd
+    parentId: fld_6f9f26e00b264e5690d6d3a12f799f10
+    modified: 1663101145772
+    created: 1663101145772
+    url: "{{ _.urladmin }}fluxo/"
+    name: Editar Item
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id":113,
+        	"elemento":1,
+        	"subelementos":1,
+        	"tipos":1,
+        	"subtipos":1,
+        	"minitipos":1,
+        	"nanotipos":1,
+        	"descricao":"OPA",
+        	"valor":65
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_83f09e2a8f4c42d2939efcf25a67c4c5
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966884.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c908c675fa244562bc127798d0d6ab46
+    parentId: fld_6f9f26e00b264e5690d6d3a12f799f10
+    modified: 1663101145768
+    created: 1663101145768
+    url: "{{ _.urladmin }}fluxo/3"
+    name: Deletar params
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_9d790d9a145d412cbbe42a2579a2f50b
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966866
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5b4480f4a4df49b08dfc237276f6fb4d
+    parentId: fld_6f9f26e00b264e5690d6d3a12f799f10
+    modified: 1663101145766
+    created: 1663101145766
+    url: "{{ _.urladmin }}fluxo/"
+    name: Deletar itens
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id":2
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e476a8c0ada94f21aa10ba2e1d91c13c
+      - id: pair_0e20fd338a9e4d2db9e45c619b339407
+        name: authorization-token
+        value: "{{ _.adminToken }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1657567966841
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_cec7d8bcff774bd59bd0490ab7becb24
+    parentId: wrk_e0416ce97cb94c9c8b2ed2ade6ccb21a
+    modified: 1663101895097
+    created: 1663101145747
+    name: Base Environment
+    data:
+      comumToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY2MTUzMTg1Nn0.ZzDFrjyJWbFmM5xchLfq8EGGB0STmU1ll3zWmTCXdv4
+      adminToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY2MTUzMTg1Nn0.ZzDFrjyJWbFmM5xchLfq8EGGB0STmU1ll3zWmTCXdv4
+      tokenadminSemExpiracao: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY2MTUzMTg1Nn0.ZzDFrjyJWbFmM5xchLfq8EGGB0STmU1ll3zWmTCXdv4
+      tokencomumSemExpiracao: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiam9hb2RldkBvb28uY29tIiwiYWRtaW4iOjEsImlhdCI6MTY2MTUzMTg1Nn0.ZzDFrjyJWbFmM5xchLfq8EGGB0STmU1ll3zWmTCXdv4
+      urladmin: https://fluxos-api.vercel.app/v1/admin/
+      urlcomun: https://fluxos-api.vercel.app/v1/
+    dataPropertyOrder:
+      "&":
+        - comumToken
+        - adminToken
+        - tokenadminSemExpiracao
+        - tokencomumSemExpiracao
+        - urladmin
+        - urlcomun
+    color: null
+    isPrivate: false
+    metaSortKey: 1657411166564
+    _type: environment
+  - _id: jar_6d9d55c40f0b4561bc2f637b5b8f8eb2
+    parentId: wrk_e0416ce97cb94c9c8b2ed2ade6ccb21a
+    modified: 1663101145750
+    created: 1663101145750
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_185f8701e361458285114cdb101e67b7
+    parentId: wrk_e0416ce97cb94c9c8b2ed2ade6ccb21a
+    modified: 1663101145931
+    created: 1663101145752
+    fileName: Fluxos-API-Producao
+    contents: ""
+    contentType: yaml
+    _type: api_spec
