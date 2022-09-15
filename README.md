@@ -1,11 +1,8 @@
-
-
-# Fluxos  API
+# Fluxos API
 
 <img align='right' src='./assets/logo.svg' width=200px >
 
 Estou criando um Sistema de fluxo de caixa para mim, controlar minha finanças e abandonar as tabelas de excel
-
 
 ### Indice 💰
 
@@ -18,15 +15,12 @@ Estou criando um Sistema de fluxo de caixa para mim, controlar minha finanças e
 
 ## Introdução 💵
 
-
-Uma esse desenlvovimento foi um projeto do Curso ProgramadorBr, sendo que a estilização dos dos elementos teve um toque especial das minhas mãos.
+Essa API foi desenvolvida de por conta própria, para gestão financeira minha pessoal, baseada uma planilha antiga minha.
+Com ele posso classificar alguns de meus gastos e ganhos diários.
 
 ## Requisitos e Desenvolvimento 🤳🔧
 
-
-**Desenvolvimento** 
-
-
+**Desenvolvimento**
 
 <img width=80 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
 
@@ -34,23 +28,19 @@ Uma esse desenlvovimento foi um projeto do Curso ProgramadorBr, sendo que a esti
 
 <img width=90 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
 
-          
-
-
-
 **Requisitos**
 
-*Usuário*
+_Usuário_
 
 Criar usuário com login e suas Operações de CRUD.
 
 Manter usuário com controle de acesso selecionando o permissões de prévilegios.
 
-*Fluxo de caixa*
+_Fluxo de caixa_
 
 Possível realizar as operações básica de CRUD e nós mesmo e possível selecionar classificações de dados personalizadas conforme critério que administrador queira. Você verá posteriormente:
 
-*Classificações*
+_Classificações_
 
 Será possível também criar como foi dito acima, tipos de classificações personalizadas. Todas eles serão atrelados ao id item do fluxo de caixa:
 
@@ -58,14 +48,14 @@ Exemplo: Classificação Elementos
 
 ```markdown
 [
-	{
-		"idelementos": 1,
-		"descricao_elementos": ""
-	},
-	{
-		"idelementos": 5,
-		"descricao_elementos": "Ativo"
-	}
+{
+"idelementos": 1,
+"descricao_elementos": ""
+},
+{
+"idelementos": 5,
+"descricao_elementos": "Ativo"
+}
 ]
 ```
 
@@ -73,38 +63,38 @@ Exemplo: Fluxo de caixa:
 
 ```markdown
 [
-	{
-		"id_item_fluxo": 1,
-		"dia_item_fluxo": 16,
-		"mes_item_fluxo": 7,
-		"ano_item_fluxo": 2022,
-		"hora_item_fluxo": "12:40:59",
-		"descricao_elementos": "",
-		"descricao_subelementos": "",
-		"descricao_tipos": "",
-		"descricao_subtipos": "",
-		"descricao_minitipos": "",
-		"descricao_nanotipos": "",
-		"descricao_item_fluxo": "Saldo Anterior",
-		"valor_item_fluxo": "0.00",
-		"saldo_atual": "0.00"
-	},
-	{
-		"id_item_fluxo": 2,
-		"dia_item_fluxo": 22,
-		"mes_item_fluxo": 7,
-		"ano_item_fluxo": 2022,
-		"hora_item_fluxo": "18:31:27",
-		"descricao_elementos": "",
-		"descricao_subelementos": "",
-		"descricao_tipos": "",
-		"descricao_subtipos": "",
-		"descricao_minitipos": "",
-		"descricao_nanotipos": "",
-		"descricao_item_fluxo": "Ganhei na loteria",
-		"valor_item_fluxo": "100.00",
-		"saldo_atual": "100.00"
-	},
+{
+"id_item_fluxo": 1,
+"dia_item_fluxo": 16,
+"mes_item_fluxo": 7,
+"ano_item_fluxo": 2022,
+"hora_item_fluxo": "12:40:59",
+"descricao_elementos": "",
+"descricao_subelementos": "",
+"descricao_tipos": "",
+"descricao_subtipos": "",
+"descricao_minitipos": "",
+"descricao_nanotipos": "",
+"descricao_item_fluxo": "Saldo Anterior",
+"valor_item_fluxo": "0.00",
+"saldo_atual": "0.00"
+},
+{
+"id_item_fluxo": 2,
+"dia_item_fluxo": 22,
+"mes_item_fluxo": 7,
+"ano_item_fluxo": 2022,
+"hora_item_fluxo": "18:31:27",
+"descricao_elementos": "",
+"descricao_subelementos": "",
+"descricao_tipos": "",
+"descricao_subtipos": "",
+"descricao_minitipos": "",
+"descricao_nanotipos": "",
+"descricao_item_fluxo": "Ganhei na loteria",
+"valor_item_fluxo": "100.00",
+"saldo_atual": "100.00"
+},
 ```
 
 ## Como Instalar 🪛
@@ -113,27 +103,21 @@ Exemplo: Fluxo de caixa:
 
 1.Tenha um **NODEjs** e **Mysql 8.0** instalado.
 
-2. Clone o projeto.
+2.  Clone o projeto.
 
-3. Importe o dump do banco de dados. Localizado no caminho abaixo:
-
+3.  Importe o dump do banco de dados. Localizado no caminho abaixo:
 
         Model\dblfluxosnodb20220902.sql
 
-
-
 <img  align='left' src="./assets/dbimport.png">
-
 
 4. Nomeie um Schema da importação conforme o seu critério com a imagem:
 
 <img  align=center src="./assets/dbconfigs.png">
 
-
 4. Entre no Diretorio no **CMD ou em Outro terminal** de comando.
 
 5. Em seguida volte na pasta raiz
-
 
 6. **ATENÇÃO** Após isso digite o npm install se caso o dotenv nao for instalado dentro da pasta **raiz** do projeto.
 
@@ -151,9 +135,7 @@ Exemplo nao preenchido no arquivo .env.example:
 
                 TOKEN_SECRET=
 
-
-Exemplo preenchido  .env:
-
+Exemplo preenchido .env:
 
                 PORT_SERVIDOR=3000
 
@@ -165,13 +147,9 @@ Exemplo preenchido  .env:
 
                 TOKEN_SECRET="joao"
 
-
-
 8.Após volte para pasta **raiz** e digite seguinte comando abaixo:
 
         npm start
-
-
 
 5. TCHAM RAMMM Rodando !
 6. Use uma API de teste do seu agrado. Ex:Postman, ou Insommia.
@@ -181,10 +159,16 @@ Exemplo preenchido  .env:
 
 **Iniciar:**
 
-### Clique aqui para acessar a documentação completa da API..
-<a href='https://docs-fluxosapi.netlify.app' >Clique aqui</a>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7619042e-b906-46f1-8b36-9c3de26725ce/deploy-status)](https://app.netlify.com/sites/docs-fluxosapi/deploys)
 
-1. Faça login rota inicial. Exemplo: http://localhost:3000/login
+### Clique aqui para acessar a documentação completa da API ou fazer um teste caso queira na API em producão..
+
+https://fluxos-api.vercel.app/v1
+
+<a href='https://docs-fluxosapi.netlify.app' >Clique aqui para acessar a documentacão</a>
+
+1. Faça login rota inicial. Exemplo: http://localhost:3000/v1/login ou https://fluxos-api.vercel.app/v1/login
+
 2. Busque o token de acesso na chave do Json Resposta : “tokenUser”
 3. Coloque no cabeçalho
 4. E siga as rotas.
@@ -210,8 +194,9 @@ Valeu por passar aqui! 😉Um abração de Ursoo 🐻! Volte sempre!
 
 Feito com 🤭 por Joao Guilherme 👋🏽 Entre em contato!
 
-[![Linkedin Badge](https://img.shields.io/badge/-Joao-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jaoo/)](https://www.linkedin.com/in/joaog123/) 
+[![Linkedin Badge](https://img.shields.io/badge/-Joao-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jaoo/)](https://www.linkedin.com/in/joaog123/)
 [![Badge](https://img.shields.io/badge/-joaoguilherme94@live.com-c80?style=flat-square&logo=Microsoft&logoColor=white&link=mailto:joaoguilherme94@live.com)](mailto:joaoguilherme94@live.com)
 
 ### **License**
+
 [![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
