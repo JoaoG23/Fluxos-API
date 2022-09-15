@@ -113,7 +113,7 @@ const usuarioController = {
       const email = req.body.email;
       const tel = req.body.telefone;
 
-      const verificarSql = `CALL pr_registrar_usuario( ? , ? , ? , ? , ?, 0 )`;
+      const verificarSql = `CALL pr_registrar_usuario( ? , ? , ? , ? , ?, 1 )`;
       const values = [nome, login, senha, email, tel];
       const queryRegistrar = await dbc.query(verificarSql, values);
       const resposta = queryRegistrar[0][0][0];
