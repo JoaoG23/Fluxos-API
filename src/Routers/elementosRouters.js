@@ -11,5 +11,6 @@ router.delete("/", elementosController.deletar);
 router.delete("/:id_elementos", elementosController.deletar);
 
 router.put("/", elementosController.editar);
+router.put("/:id_elementos", elementosController.editar);
 
 module.exports = router;
