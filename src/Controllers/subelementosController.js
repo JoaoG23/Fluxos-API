@@ -73,7 +73,13 @@ const subelementosController = {
     editar: async (req, resp) => {
 
         try {
-            const idEncontrado = req.body.id_subelementos;
+            
+            let idEncontrado = req.params.id_elementos;
+
+            if (!idEncontrado) {
+                idEncontrado = req.body.id_elementos;
+            }
+            
             const nomeSubelementos = req.body.nome_subelementos;
 
             const registroEncontrado = await services.ifExistsRegister( subelementosController.tabela, subelementosController.colunaID, idEncontrado );
