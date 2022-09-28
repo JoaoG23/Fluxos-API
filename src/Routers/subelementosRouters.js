@@ -8,6 +8,7 @@ router.get("/:id_subelementos", subelementosController.visualizarPeloID);
 router.post("/", subelementosController.inserir);
 
 router.put("/", subelementosController.editar);
+router.put("/:id_subelementos", subelementosController.editar);
 
 router.delete("/", subelementosController.deletar);
 router.delete("/:id_subelementos", subelementosController.deletar);
