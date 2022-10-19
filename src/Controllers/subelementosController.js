@@ -74,10 +74,10 @@ const subelementosController = {
 
         try {
             
-            let idEncontrado = req.params.id_elementos;
+            let idEncontrado = req.params.id_subelementos;
 
             if (!idEncontrado) {
-                idEncontrado = req.body.id_elementos;
+                idEncontrado = req.body.id_subelementos;
             }
             
             const nomeSubelementos = req.body.nome_subelementos;

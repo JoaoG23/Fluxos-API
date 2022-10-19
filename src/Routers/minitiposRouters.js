@@ -8,6 +8,7 @@ router.get("/:id_minitipos", minitiposController.visualizarPeloID);
 router.post("/", minitiposController.inserir);
 
 router.put("/", minitiposController.editar);
+router.put("/:id_minitipos", minitiposController.editar);
 
 router.delete("/", minitiposController.deletar);
 router.delete("/:id_minitipos", minitiposController.deletar);

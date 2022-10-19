@@ -73,7 +73,12 @@ const minitiposController = {
     editar: async (req, resp) => {
 
         try {
-            const idEncontrado = req.body.id_minitipos;
+            let idEncontrado = req.params.id_minitipos;
+            
+            if (!idEncontrado) {
+                
+                idEncontrado = req.body.id_minitipos;
+            }
             const nomeminitipos = req.body.nome_minitipos;
 
             const registroEncontrado = await services.ifExistsRegister( minitiposController.tabela, minitiposController.colunaID, idEncontrado );

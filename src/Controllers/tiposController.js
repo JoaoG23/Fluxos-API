@@ -73,7 +73,13 @@ const tiposController = {
     editar: async (req, resp) => {
 
         try {
-            const idEncontrado = req.body.id_tipos;
+            let idEncontrado = req.params.id_tipos;
+            
+            if (!idEncontrado) {
+                
+                 idEncontrado = req.body.id_tipos;
+            }
+            
             const nometipos = req.body.nome_tipos;
 
             const registroEncontrado = await services.ifExistsRegister( tiposController.tabela, tiposController.colunaID, idEncontrado );

@@ -73,7 +73,13 @@ const nanotiposController = {
     editar: async (req, resp) => {
 
         try {
-            const idEncontrado = req.body.id_nanotipos;
+            let idEncontrado = req.params.id_nanotipos;
+            
+            if (!idEncontrado) {
+                
+                idEncontrado = req.body.id_nanotipos;
+            }
+
             const nomenanotipos = req.body.nome_nanotipos;
 
             const registroEncontrado = await services.ifExistsRegister( nanotiposController.tabela, nanotiposController.colunaID, idEncontrado );

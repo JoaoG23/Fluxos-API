@@ -8,6 +8,7 @@ router.get("/:id_nanotipos", nanotiposController.visualizarPeloID);
 router.post("/", nanotiposController.inserir);
 
 router.put("/", nanotiposController.editar);
+router.put("/:id_nanotipos", nanotiposController.editar);
 
 router.delete("/", nanotiposController.deletar);
 router.delete("/:id_nanotipos", nanotiposController.deletar);

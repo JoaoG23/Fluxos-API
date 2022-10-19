@@ -73,8 +73,13 @@ const subtiposController = {
     editar: async (req, resp) => {
 
         try {
-            const idEncontrado = req.body.id_subtipos;
+            let idEncontrado = req.params.id_subtipos;
             const nomesubtipos = req.body.nome_subtipos;
+            
+            if (!idEncontrado) {
+                
+                idEncontrado = req.body.id_subtipos;
+            }
 
             const registroEncontrado = await services.ifExistsRegister( subtiposController.tabela, subtiposController.colunaID, idEncontrado );
             if (registroEncontrado <= 0) {
