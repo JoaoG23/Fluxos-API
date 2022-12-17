@@ -7,9 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "set NODE_ENV=test nodemon index.js",
-    "start": "node index.js",
-    "prod":"SET NODE_ENV=prod && node index.js"
+    "dev": "set NODE_ENV=test nodemon server.js",
+    "start": "node server.js",
+    "prod":"SET NODE_ENV=prod && node server.js"
   },
   "author": "",
   "license": "MIT",
